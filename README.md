@@ -26,3 +26,7 @@ Consider accessibility, both for building the component and for its use:
 - Are form fields, figures, fieldsets and other interactive elements labelled?
 
 ## External References
+
+- https://www.nngroup.com/articles/cards-component/
+- https://inclusive-components.design/cards/
+- https://design-system.w3.org/components/cards.html
