@@ -1,8 +1,8 @@
 import { LitElement, html } from 'lit';
-import styles from './<%= name %>.styles';
-import './<%= name %>.css';
+import styles from './ilw-card.styles';
+import './ilw-card.css';
 
-class <%= _.upperFirst(_.camelCase(name.slice(4))) %> extends LitElement {
+class Card extends LitElement {
 
     static get properties() {
         return {
@@ -32,4 +32,4 @@ class <%= _.upperFirst(_.camelCase(name.slice(4))) %> extends LitElement {
     }
 }
 
-customElements.define('<%= name %>', <%= _.upperFirst(_.camelCase(name.slice(4))) %>);
+customElements.define('ilw-card', Card);
