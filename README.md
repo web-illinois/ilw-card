@@ -14,8 +14,17 @@ several variations:
 
 - The top of the card can have an image using `slot="image"`, or an icon using `slot="icon"`.
 - The whole card can be made clickable using the attribute `clickable`.
-- Text content can be centered using the `centered` attribute.
+- Text content can be centered using `align="center"`.
 - Color themes for `gray`, `blue`, `orange`, `blue-gradient` and `orange-gradient`. For example, `theme="blue"`.
+
+### Slots
+
+| Slot            | Description                                                                                |
+|-----------------|--------------------------------------------------------------------------------------------|
+| `slot="image"`  | Placed full-width at the top of the card with a roughly 16:10 aspect ratio.                |
+| `slot="icon"`   | Centered at the top of the card with ample spacing.                                        |
+| `slot="footer"` | Content remains at the bottom of the card when the card is stretched to fit a larger area. |
+
 
 ## Code Examples
 
