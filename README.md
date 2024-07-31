@@ -21,7 +21,7 @@ several variations:
 
 | Slot            | Description                                                                                |
 |-----------------|--------------------------------------------------------------------------------------------|
-| `slot="image"`  | Placed full-width at the top of the card with a roughly 16:10 aspect ratio.                |
+| `slot="image"`  | Placed full-width at the top of the card.                                                  |
 | `slot="icon"`   | Centered at the top of the card with ample spacing.                                        |
 | `slot="footer"` | Content remains at the bottom of the card when the card is stretched to fit a larger area. |
 

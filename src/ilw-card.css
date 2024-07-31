@@ -1,0 +1,33 @@
+@layer base {
+    :root {
+        --ilw-card--aspect-ratio: 16/10;
+        --ilw-card--content-padding-top: 1rem;
+        --ilw-card--content-padding-right: 2rem;
+        --ilw-card--content-padding-bottom: 1rem;
+        --ilw-card--content-padding-left: 2rem;
+        --ilw-card--font-size: 1.2em;
+
+        --ilw-card--background: var(--ilw-background--color);
+        --ilw-card--heading-color: var(--il-orange);
+    }
+
+    ilw-card {
+        border: 1px solid var(--il-blue);
+    }
+
+    ilw-card [slot=image] {
+        width: 100%;
+    }
+
+    ilw-card [slot=icon] {
+        max-height: 80px;
+        max-width: 120px;
+    }
+
+
+    ilw-card > h2:first-of-type,
+    ilw-card > h3:first-of-type,
+    ilw-card > h4:first-of-type {
+        margin-top: 0;
+    }
+}

@@ -2,16 +2,121 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Card Component</title>
     <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
     <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-global/3.0.0-alpha/ilw-global.css">
-    <script type="module" src="/src/ilw-card.js"></script>
+    <script type="module" src="https://dev.toolkit.illinois.edu/ilw-grid/1.0.0-alpha/ilw-grid.js"></script>
+    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-grid/1.0.0-alpha/ilw-grid.css">
+    <script type="module" src="../src/ilw-card.js"></script>
+    <style>
+        body {
+            padding: 15px;
+            font-size: 16px;
+            font-family: var(--il-font-sans);
+            background: #f4f4f4;
+        }
+        .theme-select {
+            font-size: 24px;
+            padding-bottom: 15px;
+        }
+        .theme-select select {
+            font-size: 24px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const url = new URL(location);
+            let theme = url.searchParams.get("theme");
+            console.log(url, theme);
+            if (theme) {
+                document.querySelectorAll("ilw-card").forEach((el) => {
+                    el.setAttribute("theme", theme);
+                });
+                document.getElementById("theme").value = theme;
+            }
+
+            document.getElementById("theme").addEventListener("change", (ev) => {
+                document.querySelectorAll("ilw-card").forEach((el) => {
+                    el.setAttribute("theme", ev.target.value);
+                })
+                const url = new URL(location);
+                url.searchParams.set("theme", ev.target.value);
+                history.pushState({}, "", url);
+            })
+        })
+    </script>
 </head>
 
-<body style="margin: 0; padding: 0;">
-<ilw-card></ilw-card>
+<body>
+<div class="theme-select">
+    <label for="theme">Theme: </label>
+    <select id="theme">
+        <option value="white">white</option>
+        <option value="gray">gray</option>
+        <option value="blue">blue</option>
+        <option value="orange">orange</option>
+        <option value="blue-gradient">blue-gradient</option>
+        <option value="orange-gradient">orange-gradient</option>
+    </select>
+</div>
+<ilw-grid innerwidth="350px">
+    <ilw-card>
+        <img src="https://fastly.picsum.photos/id/159/320/200.jpg?hmac=5rPdtfpYQaZopnmOHhelxv5a6GuLOqcRsxSbZsZIQZY"
+             alt="" slot="image">
+        <h3>Image Card</h3>
+        <p>Card with an image and a footer button.</p>
+        <div slot="footer"><a href="#" class="ilw-button">Learn More <span class="ilw-sr-only">About Student Life</span></a></div>
+    </ilw-card>
+    <ilw-card>
+        <h3>Plain Card</h3>
+        <p>A card with just a heading, text, and a footer with two buttons.</p>
+        <ul class="ilw-buttons" slot="footer">
+            <li><a href="#">Learn More <span class="ilw-sr-only">About Student Life</span></a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </ilw-card>
+
+    <ilw-card clickable>
+        <img src="https://fastly.picsum.photos/id/821/320/200.jpg?hmac=RVG3Kon-1NU2_36rEvVVfR70VetoI3lqNuGyXKKbHCU"
+             alt="" slot="image">
+        <h3>
+            <a href="#">Clickable Card</a>
+        </h3>
+        <p>A card that is clickable with an image, plus a footer with one button.</p>
+        <div slot="footer"><a href="#" class="ilw-button">Contact Us</a></div>
+    </ilw-card>
+    <ilw-card aspectRatio="16/9">
+        <img src="https://fastly.picsum.photos/id/621/320/320.jpg?hmac=QYx5v9naC2WU4ngKEtULKj1XbCm31KgnttbRi2uj1OI"
+             alt="" slot="image">
+        <h3>Aspect Ratio</h3>
+        <p>A card where a taller image is forced into the specified aspect ratio.</p>
+    </ilw-card>
+    <ilw-card clickable>
+        <img src="https://cdn.brand.illinois.edu/icons/solid/blue/alumni.svg" alt="" slot="icon">
+        <h3>
+            <a href="#">Clickable Icon</a>
+        </h3>
+        <p>A card with an icon, and the card is clickable.</p>
+    </ilw-card>
+    <ilw-card aspectRatio="3/1">
+        <img src="https://cdn.brand.illinois.edu/icons/solid/blue/alumni.svg" alt="" slot="icon">
+        <h3>
+            Aspect Ratio Icon
+        </h3>
+        <p>A card with an icon, where the space around the icon has an aspect ratio.</p>
+        <div slot="footer"><a href="#" class="ilw-button">Contact Us</a></div>
+    </ilw-card>
+    <ilw-card>
+        <img src="https://cdn.brand.illinois.edu/icons/solid/blue/alumni.svg" alt="" slot="icon">
+        <h3>
+            <a href="#">Student Life</a>
+        </h3>
+        <p>Animal sciences students extend their learning and career networks beyond the classroom. </p>
+        <div slot="footer"><a href="#" class="ilw-button">Contact Us</a></div>
+    </ilw-card>
+</ilw-grid>
 </body>
 
 </html>
