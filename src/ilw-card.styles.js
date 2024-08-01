@@ -4,7 +4,6 @@ export default css`
     :host {
         display: flex;
         flex-direction: column;
-        container-type: inline-size;
     }
 
     article {
@@ -14,6 +13,7 @@ export default css`
         flex-direction: column;
         justify-content: stretch;
     }
+    
 
     .card-graphic {
         display: none;
@@ -36,6 +36,16 @@ export default css`
         object-fit: cover;
     }
 
+
+    .card-image ::slotted(*) {
+        width: 100%;
+    }
+
+    .card-icon ::slotted(*) {
+        max-height: 80px;
+        max-width: 120px;
+    }
+    
     .card-icon {
         position: absolute;
         top: var(--ilw-card--content-padding-top);

@@ -25,6 +25,30 @@ several variations:
 | `slot="icon"`   | Centered at the top of the card with ample spacing.                                        |
 | `slot="footer"` | Content remains at the bottom of the card when the card is stretched to fit a larger area. |
 
+### Icons in clickable cards
+
+In order for themes and hover states to color icons correctly in a clickable card, the icon needs to be colorable using
+`currentColor`.
+
+CSS to apply this to the [Illinois brand icons](https://cdn.brand.illinois.edu/icons.html) is already included,
+as long as you include them as inline SVG rather than with an `<img>` tag.
+
+With other icons, you may need to apply the change. For reference, here is the relevant CSS for the Illinois icons:
+
+### Buttons in cards
+
+The card component overrides certain aspects of `ilw-button` and `ilw-buttons` elements to make them match
+with the chosen theme, as well as hover states. The overrides only apply if there isn't a specific theme class
+added to the buttons (eg. `ilw-theme-orange`).
+
+For clickable cards, the CSS background animation is also removed, because it doesn't really work with the card
+transition.
+
+```css
+ilw-card[clickable] path.cls-1 {
+    fill: currentColor;
+}
+```
 
 ## Code Examples
 

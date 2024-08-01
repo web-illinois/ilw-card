@@ -1,33 +1,236 @@
 @layer base {
     :root {
+        --ilw-card--margin-top: 16px;
+        --ilw-card--margin-bottom: 16px;
         --ilw-card--aspect-ratio: 16/10;
-        --ilw-card--content-padding-top: 1rem;
+        --ilw-card--content-padding-top: 2.5rem;
         --ilw-card--content-padding-right: 2rem;
-        --ilw-card--content-padding-bottom: 1rem;
+        --ilw-card--content-padding-bottom: 2rem;
         --ilw-card--content-padding-left: 2rem;
         --ilw-card--font-size: 1.2em;
 
+        --ilw-card--border-color: var(--il-blue);
         --ilw-card--background: var(--ilw-background--color);
         --ilw-card--heading-color: var(--il-orange);
+        --ilw-card--icon-color: var(--ilw-text--color);
+        --ilw-card--text-color: var(--ilw-text--color);
+
+        --ilw-card--clickable--heading-color: var(--ilw-card--heading-color);
+        --ilw-card--clickable--border: var(--il-orange);
+        --ilw-card--clickable--link: var(--ilw-link--color);
+
+        --ilw-card--hover--background: var(--il-blue);
+        --ilw-card--hover--heading-color: #fff;
+        --ilw-card--hover--text-color: #fff;
+        --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1);
+        --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+    }
+
+    ilw-card[clickable]:hover {
+        --ilw-button--border-color: #fff;
+    }
+
+    ilw-card[theme=gray] {
+        --ilw-card--border-color: var(--il-storm);
+        --ilw-card--background: var(--il-storm-lighter-4);
+        --ilw-card--heading-color: var(--il-altgeld);
+        --ilw-card--icon-color: var(--il-storm-darker-1);
+        --ilw-card--text-color: var(--il-storm-darker-1);
+
+        --ilw-card--clickable--border: var(--il-altgeld);
+        --ilw-card--clickable--link: var(--ilw-link--color);
+    }
+
+    ilw-card[theme=blue] {
+        --ilw-card--border-color: var(--il-storm);
+        --ilw-card--background: var(--il-blue);
+        --ilw-card--heading-color: var(--il-orange);
+        --ilw-card--icon-color: #fff;
+        --ilw-card--text-color: #fff;
+
+        --ilw-card--clickable--heading-color: #fff;
+        --ilw-card--clickable--border: var(--il-orange);
+        --ilw-card--clickable--link: #fff;
+
+        --ilw-card--hover--background: #fff;
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
+        --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1);
+        --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+
+        --ilw-button--border-color: #fff;
+
+        &[clickable]:hover {
+            --ilw-button--border-color: var(--il-blue);
+        }
+    }
+
+    ilw-card[theme=orange] {
+        --ilw-card--border-color: var(--il-storm);
+        --ilw-card--background: var(--il-orange);
+        --ilw-card--heading-color: #fff;
+        --ilw-card--icon-color: var(--il-blue);
+        --ilw-card--text-color: var(--il-blue);
+
+        --ilw-card--clickable--heading-color: #fff;
+        --ilw-card--clickable--border: var(--il-blue);
+        --ilw-card--clickable--link: var(--il-blue);
+
+        --ilw-card--hover--background: #fff;
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
+        --ilw-card--hover--clickable-border: var(--il-orange);
+        --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+
+        --ilw-button--background-color: var(--il-orange);
+        --ilw-button--foreground-color: #fff;
+        --ilw-button--border-color: #fff;
+        --ilw-button--focused-background-color: #fff;
+        --ilw-button--focused-foreground-color: var(--il-orange);
+        --ilw-button--focused-border-color: var(--il-orange);
+
+        &[clickable]:hover {
+            --ilw-button--border-color: var(--il-orange);
+        }
+    }
+
+    ilw-card[theme=blue-gradient] {
+        --ilw-card--border-color: var(--il-storm);
+        --ilw-card--background: linear-gradient(160deg, #1D58A7 20%, #13294B 100%);
+
+        --ilw-card--heading-color: #fff;
+        --ilw-card--icon-color: #fff;
+        --ilw-card--text-color: #fff;
+
+        --ilw-card--clickable--heading-color: #fff;
+        --ilw-card--clickable--border: var(--il-industrial-lighter-2);
+        --ilw-card--clickable--link: #fff;
+
+        --ilw-card--hover--background: #fff;
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
+        --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1);
+        --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+
+        --ilw-button--background-color: transparent;
+            --ilw-button--border-color: #fff;
+
+        &[clickable]:hover {
+            --ilw-button--background-color: var(--il-blue);
+            --ilw-button--border-color: var(--il-blue);
+        }
+    }
+
+    ilw-card[theme=orange-gradient] {
+        --ilw-card--border-color: var(--il-storm);
+        --ilw-card--background: linear-gradient(135.14deg, #FCB316 0%, #FD890E 30.44%, #FF5F05 100.75%);
+        --ilw-card--heading-color: #fff;
+        --ilw-card--icon-color: var(--il-blue);
+        --ilw-card--text-color: var(--il-blue);
+
+        --ilw-card--clickable--heading-color: #fff;
+        --ilw-card--clickable--border: var(--il-industrial);
+        --ilw-card--clickable--link: var(--il-blue);
+
+        --ilw-card--hover--background: #fff;
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
+        --ilw-card--hover--clickable-border: var(--il-orange);
+        --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+
+        --ilw-button--background-color: transparent;
+        --ilw-button--foreground-color: #fff;
+        --ilw-button--border-color: #fff;
+        --ilw-button--focused-background-color: #fff;
+        --ilw-button--focused-foreground-color: var(--il-orange);
+        --ilw-button--focused-border-color: var(--il-orange);
+
+
+        &[clickable]:hover {
+            --ilw-button--background-color: var(--il-orange);
+        }
     }
 
     ilw-card {
-        border: 1px solid var(--il-blue);
-    }
-
-    ilw-card [slot=image] {
-        width: 100%;
-    }
-
-    ilw-card [slot=icon] {
-        max-height: 80px;
-        max-width: 120px;
-    }
+        border: 1px solid var(--ilw-card--border-color);
+        background: var(--ilw-card--background);
+        margin-top: var(--ilw-card--margin-top);
+        margin-bottom: var(--ilw-card--margin-bottom);
+        color: var(--ilw-card--text-color);
+        min-width: 200px;
 
 
-    ilw-card > h2:first-of-type,
-    ilw-card > h3:first-of-type,
-    ilw-card > h4:first-of-type {
-        margin-top: 0;
+        &[align=center] {
+            text-align: center;
+        }
+
+        & > h2, & > h3, & > h4, & > h5, & > h6 {
+            color: var(--ilw-card--heading-color);
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        &[clickable] {
+            border-bottom: 4px solid var(--ilw-card--clickable--border);
+            cursor: pointer;
+
+            a {
+                color: var(--ilw-card--clickable--link);
+            }
+
+            & > h2, & > h3, & > h4, & > h5, & > h6 {
+                a {
+                    color: var(--ilw-card--clickable--heading-color);
+                    text-decoration: none;
+                    display: inline-block;
+                    padding-right: 30px;
+                    position: relative;
+                    vertical-align: middle;
+
+                    &::after {
+                        content: "\00BB";
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        font-size: 2em;
+                        height: 0.5em;
+                        overflow: hidden;
+                        line-height: 0.5;
+                        top: calc(50% - 0.25em - 2px);
+                        font-weight: normal;
+                    }
+                }
+            }
+
+            &:hover {
+                border-bottom-color: var(--ilw-card--hover--clickable-border);
+                background: var(--ilw-card--hover--background);
+                color: var(--ilw-card--hover--text-color);
+
+                a {
+                    color: var(--ilw-card--hover--link);
+                }
+
+                & > h2, & > h3, & > h4, & > h5, & > h6 {
+                    a {
+                        color: var(--ilw-card--hover--heading-color);
+                    }
+                }
+            }
+        }
     }
+}
+
+
+ilw-card[clickable] {
+    a.ilw-button, button.ilw-button, ul.ilw-buttons a, ul.ilw-buttons button {
+        transition-duration: 0s;
+    }
+}
+
+/* Make il icons color currentColor in clickable cards */
+ilw-card[clickable] path.cls-1 {
+    fill: currentColor;
 }

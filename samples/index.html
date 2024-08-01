@@ -18,11 +18,25 @@
             background: #f4f4f4;
         }
         .theme-select {
-            font-size: 24px;
-            padding-bottom: 15px;
+            font-size: 20px;
+            background: var(--il-blue-lighter-4);
+            padding: 15px;
+            position: fixed;
+            right: 10px;
+            top: 0;
+            z-index: 1;
         }
         .theme-select select {
-            font-size: 24px;
+            font-size: 20px;
+        }
+        .card-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 20px;
+        }
+        .card-columns > * {
+            max-width: 400px;
         }
     </style>
     <script>
@@ -50,7 +64,7 @@
 </head>
 
 <body>
-<div class="theme-select">
+<div clickable class="theme-select">
     <label for="theme">Theme: </label>
     <select id="theme">
         <option value="white">white</option>
@@ -61,23 +75,26 @@
         <option value="orange-gradient">orange-gradient</option>
     </select>
 </div>
+
+
+<h2>Grid 1</h2>
+
 <ilw-grid innerwidth="350px">
-    <ilw-card>
+    <ilw-card align="center">
         <img src="https://fastly.picsum.photos/id/159/320/200.jpg?hmac=5rPdtfpYQaZopnmOHhelxv5a6GuLOqcRsxSbZsZIQZY"
              alt="" slot="image">
         <h3>Image Card</h3>
         <p>Card with an image and a footer button.</p>
         <div slot="footer"><a href="#" class="ilw-button">Learn More <span class="ilw-sr-only">About Student Life</span></a></div>
     </ilw-card>
-    <ilw-card>
+    <ilw-card align="center">
         <h3>Plain Card</h3>
         <p>A card with just a heading, text, and a footer with two buttons.</p>
-        <ul class="ilw-buttons" slot="footer">
+        <ul class="ilw-buttons " slot="footer">
             <li><a href="#">Learn More <span class="ilw-sr-only">About Student Life</span></a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
     </ilw-card>
-
     <ilw-card clickable>
         <img src="https://fastly.picsum.photos/id/821/320/200.jpg?hmac=RVG3Kon-1NU2_36rEvVVfR70VetoI3lqNuGyXKKbHCU"
              alt="" slot="image">
@@ -85,7 +102,7 @@
             <a href="#">Clickable Card</a>
         </h3>
         <p>A card that is clickable with an image, plus a footer with one button.</p>
-        <div slot="footer"><a href="#" class="ilw-button">Contact Us</a></div>
+        <div slot="footer"><a href="#contact" class="ilw-button">Contact Us</a></div>
     </ilw-card>
     <ilw-card aspectRatio="16/9">
         <img src="https://fastly.picsum.photos/id/621/320/320.jpg?hmac=QYx5v9naC2WU4ngKEtULKj1XbCm31KgnttbRi2uj1OI"
@@ -94,9 +111,9 @@
         <p>A card where a taller image is forced into the specified aspect ratio.</p>
     </ilw-card>
     <ilw-card clickable>
-        <img src="https://cdn.brand.illinois.edu/icons/solid/blue/alumni.svg" alt="" slot="icon">
+        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.26 51.26"><defs><style>.cls-1{fill:#0c1b55;}</style></defs><g id="Layer_2" data-name="Layer 2"><path class="cls-1" d="M36.15,22c-.88-1.63-6.33-2-11-2.05-4.71.09-10.15.42-11,2.05S12.31,28.55,12,30.23a6.5,6.5,0,0,0-.12.87c1.52-1.29,5.28-1.41,6.48-1.41a40.8,40.8,0,0,1,6.49.9,1.52,1.52,0,0,0,.6,0,44.82,44.82,0,0,1,6.48-.9c1.91,0,5,.19,6.44,1.34a7.32,7.32,0,0,0-.11-.8C37.92,28.55,37,23.66,36.15,22Z"/><path class="cls-1" d="M31.92,30.69a44.56,44.56,0,0,0-6.29.88,2.36,2.36,0,0,1-1,0,40.54,40.54,0,0,0-6.29-.88c-2.14,0-6.68.43-6.14,2.08,0,0,.39,3,12.91,2.67s12.94-2.67,12.94-2.67C38.6,31.12,34.43,30.69,31.92,30.69Z"/><path class="cls-1" d="M9,27.69a1.69,1.69,0,0,0-1-1.56c-.06-.79-.33-2.43-.54-3.51A27.54,27.54,0,0,1,7,19.69C7,18.79,8,18.43,8.11,18.4a3.71,3.71,0,0,1,1.62-.25l1.81-.77a4.71,4.71,0,0,0-3.86-.15,2.93,2.93,0,0,0-1.95,2.42,23,23,0,0,0,.49,3.21c.17.88.44,2.52.52,3.26a1.68,1.68,0,0,0-.15,3.07,18.65,18.65,0,0,1-.32,4.43,17.54,17.54,0,0,1-1.61,4.45A2.14,2.14,0,0,0,7,39.17,3.53,3.53,0,0,0,9.52,38S9.1,31.54,8.3,29.08A1.69,1.69,0,0,0,9,27.69Z"/><path class="cls-1" d="M5.31,20.56l-1.75.74a.32.32,0,0,0,0,.59l2.09.73C5.52,21.86,5.39,21.15,5.31,20.56Z"/><path class="cls-1" d="M47.66,21.25l-21.4-9a1.62,1.62,0,0,0-1.26,0L12.68,17.43h0L9.81,18.66h0l-2.29,1,0,.1c0,.42.26,1.74.47,2.8.07.33.13.65.19.95l4,1.4a15.46,15.46,0,0,1,1.11-3.32c.93-1.7,4.26-2.42,11.9-2.57,7.67.15,11,.87,11.93,2.57a16.74,16.74,0,0,1,1.19,3.67l9.42-3.3A.36.36,0,0,0,47.66,21.25Z"/></g></svg>
         <h3>
-            <a href="#">Clickable Icon</a>
+            <a href="#">Clickable Icon With A Long Link Heading That Wraps</a>
         </h3>
         <p>A card with an icon, and the card is clickable.</p>
     </ilw-card>
@@ -109,14 +126,89 @@
         <div slot="footer"><a href="#" class="ilw-button">Contact Us</a></div>
     </ilw-card>
     <ilw-card>
+        <img src="https://fastly.picsum.photos/id/467/500/300.jpg?blur=10&hmac=1jgiZHSTIAJG3u3mlKzULkZCUAs6qPuXMnlP6aDivxg" alt="" slot="image">
         <img src="https://cdn.brand.illinois.edu/icons/solid/blue/alumni.svg" alt="" slot="icon">
         <h3>
-            <a href="#">Student Life</a>
+            Image And Icon
         </h3>
-        <p>Animal sciences students extend their learning and career networks beyond the classroom. </p>
+        <p>A card with both an image and an icon.</p>
         <div slot="footer"><a href="#" class="ilw-button">Contact Us</a></div>
     </ilw-card>
 </ilw-grid>
+
+
+<h2>Grid 2</h2>
+
+<ilw-grid>
+    <ilw-card clickable>
+        Clickable card with a <a href="#">link that makes sense</a> out of context.
+    </ilw-card>
+    <ilw-card clickable>
+        Clickable card with a <a href="#">link that makes sense</a> out of context.
+    </ilw-card>
+    <ilw-card clickable>
+        Clickable card with a <a href="#">link that makes sense</a> out of context.
+    </ilw-card>
+</ilw-grid>
+
+
+<h2>Flex</h2>
+
+<div class="card-columns">
+    <ilw-card align="center">
+        <img src="https://fastly.picsum.photos/id/911/1500/900.jpg?hmac=Ovd4hF4-v8WsZz7NmvzGw3AcqAd3q4dEQkho_0UFLiA"
+             alt="" slot="image">
+        <h3>Image Card</h3>
+        <p>Card with an image and a footer button.</p>
+        <div slot="footer"><a href="#" class="ilw-button">Learn More <span class="ilw-sr-only">About Student Life</span></a></div>
+    </ilw-card>
+    <ilw-card align="center">
+        <h3>Plain Card</h3>
+        <p>A card with just a heading, text, and a footer with two buttons.</p>
+        <ul class="ilw-buttons" slot="footer">
+            <li><a href="#">Learn More <span class="ilw-sr-only">About Student Life</span></a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </ilw-card>
+    <ilw-card clickable>
+        <img src="https://fastly.picsum.photos/id/677/1500/900.jpg?hmac=x_Ytbg8t40g3B5GMWFzbPhbB4Fff_pc3BAE3GN0MuaY"
+             alt="" slot="image">
+        <h3>
+            <a href="#">Clickable Card</a>
+        </h3>
+        <p>A card that is clickable with an image, plus a footer with one button.</p>
+        <div slot="footer"><a href="#" class="ilw-button">Contact Us</a></div>
+    </ilw-card>
+</div>
+
+
+<h2>Cards On Their Own</h2>
+
+<ilw-card align="center">
+    <img src="https://fastly.picsum.photos/id/911/1500/900.jpg?hmac=Ovd4hF4-v8WsZz7NmvzGw3AcqAd3q4dEQkho_0UFLiA"
+         alt="" slot="image">
+    <h3>Image Card</h3>
+    <p>Card with an image and a footer button.</p>
+    <div slot="footer"><a href="#" class="ilw-button">Learn More <span class="ilw-sr-only">About Student Life</span></a></div>
+</ilw-card>
+<ilw-card align="center">
+    <h3>Plain Card</h3>
+    <p>A card with just a heading, text, and a footer with two buttons.</p>
+    <ul class="ilw-buttons" slot="footer">
+        <li><a href="#">Learn More <span class="ilw-sr-only">About Student Life</span></a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</ilw-card>
+<ilw-card clickable>
+    <img src="https://fastly.picsum.photos/id/677/1500/900.jpg?hmac=x_Ytbg8t40g3B5GMWFzbPhbB4Fff_pc3BAE3GN0MuaY"
+         alt="" slot="image">
+    <h3>
+        <a href="#">Clickable Card</a>
+    </h3>
+    <p>A card that is clickable with an image, plus a footer with one button.</p>
+    <div slot="footer"><a href="#" class="ilw-button">Contact Us</a></div>
+</ilw-card>
+
 </body>
 
 </html>
