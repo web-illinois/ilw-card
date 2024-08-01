@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   build:
+    if: ${{ github.repository == 'marvel-uiuc/ilw-card' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
