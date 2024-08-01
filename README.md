@@ -16,6 +16,7 @@ several variations:
 - The whole card can be made clickable using the attribute `clickable`.
 - Text content can be centered using `align="center"`.
 - Color themes for `gray`, `blue`, `orange`, `blue-gradient` and `orange-gradient`. For example, `theme="blue"`.
+- The aspect ratio of the `image` and `icon` slots can be forced using `aspectRatio="16/9"`.
 
 ### Slots
 
