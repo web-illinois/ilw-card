@@ -37,6 +37,7 @@
         --ilw-card--icon-color: var(--il-storm-darker-1);
         --ilw-card--text-color: var(--il-storm-darker-1);
 
+        --ilw-card--clickable--heading-color: var(--il-altgeld);
         --ilw-card--clickable--border: var(--il-altgeld);
         --ilw-card--clickable--link: var(--ilw-link--color);
     }
