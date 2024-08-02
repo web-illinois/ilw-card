@@ -13,7 +13,7 @@ export default css`
         flex-direction: column;
         justify-content: stretch;
     }
-    
+
 
     .card-graphic {
         display: none;
@@ -22,7 +22,12 @@ export default css`
 
     .graphic .card-graphic {
         display: block;
-        min-height: 80px;
+        min-height: var(--ilw-card--icon-height);
+    }
+
+    .card-icon ::slotted(*) {
+        max-height: var(--ilw-card--icon-height);
+        max-width: var(--ilw-card--icon-width);
     }
 
     .force-ratio .card-graphic {
@@ -41,11 +46,6 @@ export default css`
         width: 100%;
     }
 
-    .card-icon ::slotted(*) {
-        max-height: 80px;
-        max-width: 120px;
-    }
-    
     .card-icon {
         position: absolute;
         top: var(--ilw-card--content-padding-top);

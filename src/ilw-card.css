@@ -1,13 +1,18 @@
 @layer base {
     :root {
-        --ilw-card--margin-top: 16px;
-        --ilw-card--margin-bottom: 16px;
+        --ilw-card--margin-top: 1rem;
+        --ilw-card--margin-bottom: 1rem;
         --ilw-card--aspect-ratio: 16/10;
         --ilw-card--content-padding-top: 2.5rem;
         --ilw-card--content-padding-right: 2rem;
         --ilw-card--content-padding-bottom: 2rem;
         --ilw-card--content-padding-left: 2rem;
         --ilw-card--font-size: 1.2em;
+        --ilw-card--icon-width: 120px;
+        --ilw-card--icon-height: 80px;
+        --ilw-card--orange-1: #FD890E;
+        --ilw-card--orange-gradient: linear-gradient(135.14deg, var(--il-harvest) 0%, var(--ilw-card--orange-1) 30.44%, var(--il-orange) 100.75%);
+        --ilw-card--blue-gradient: linear-gradient(160deg, var(--il-industrial) 20%, var(--il-blue) 100%);
 
         --ilw-card--border-color: var(--il-blue);
         --ilw-card--background: var(--ilw-background--color);
@@ -97,7 +102,7 @@
 
     ilw-card[theme=blue-gradient] {
         --ilw-card--border-color: var(--il-storm);
-        --ilw-card--background: linear-gradient(160deg, #1D58A7 20%, #13294B 100%);
+        --ilw-card--background: var(--ilw-card--blue-gradient);
 
         --ilw-card--heading-color: #fff;
         --ilw-card--icon-color: #fff;
@@ -124,7 +129,7 @@
 
     ilw-card[theme=orange-gradient] {
         --ilw-card--border-color: var(--il-storm);
-        --ilw-card--background: linear-gradient(135.14deg, #FCB316 0%, #FD890E 30.44%, #FF5F05 100.75%);
+        --ilw-card--background: var(--ilw-card--orange-gradient);
         --ilw-card--heading-color: #fff;
         --ilw-card--icon-color: var(--il-blue);
         --ilw-card--text-color: var(--il-blue);
@@ -158,8 +163,6 @@
         margin-top: var(--ilw-card--margin-top);
         margin-bottom: var(--ilw-card--margin-bottom);
         color: var(--ilw-card--text-color);
-        min-width: 200px;
-
 
         &[align=center] {
             text-align: center;
@@ -186,7 +189,7 @@
                     color: var(--ilw-card--clickable--heading-color);
                     text-decoration: none;
                     display: inline-block;
-                    padding-right: 30px;
+                    padding-right: 1.5em;
                     position: relative;
                     vertical-align: middle;
 
