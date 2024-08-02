@@ -11,7 +11,7 @@
     "js": "https://dev.toolkit.illinois.edu/ilw-card/1.0.0-alpha/ilw-card.js",
     "production": false,
     "notes": "",
-    "parent-style": "",
+    "parent-style": "margin: 0 auto; max-width: 400px; padding: 15px;",
     "samples": [
         {
             "name": "default",
