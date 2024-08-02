@@ -77,7 +77,10 @@ class Card extends LitElement {
             <article class=${classMap(classes)} style=${styleMap(styles)}>
                 <div class="card-graphic">
                     <div class="card-image">
-                        <slot name="image" @slotchange=${this._slotsChanged}></slot>
+                        <slot
+                            name="image"
+                            @slotchange=${this._slotsChanged}
+                        ></slot>
                     </div>
                     <div class="card-icon">
                         <slot

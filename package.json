@@ -3,7 +3,7 @@
     "description": "One paragraph description of the component.",
     "repository": "github:web-illinois/ilw-card",
     "private": false,
-    "version": "0.0.1",
+    "version": "1.0.0-alpha.0",
     "type": "module",
     "exports": {
         ".": {

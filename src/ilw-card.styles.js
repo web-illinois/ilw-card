@@ -14,7 +14,6 @@ export default css`
         justify-content: stretch;
     }
 
-
     .card-graphic {
         display: none;
         position: relative;
@@ -41,7 +40,6 @@ export default css`
         object-fit: cover;
     }
 
-
     .card-image ::slotted(*) {
         width: 100%;
     }
@@ -59,12 +57,16 @@ export default css`
 
     .card-content {
         font-size: var(--ilw-card--font-size);
-        padding: var(--ilw-card--content-padding-top) var(--ilw-card--content-padding-right) 0 var(--ilw-card--content-padding-left);
+        padding: var(--ilw-card--content-padding-top)
+            var(--ilw-card--content-padding-right) 0
+            var(--ilw-card--content-padding-left);
 
         flex: 1;
     }
 
     .card-footer {
-        padding: 0 var(--ilw-card--content-padding-right) var(--ilw-card--content-padding-bottom) var(--ilw-card--content-padding-left);
+        padding: 0 var(--ilw-card--content-padding-right)
+            var(--ilw-card--content-padding-bottom)
+            var(--ilw-card--content-padding-left);
     }
 `;
