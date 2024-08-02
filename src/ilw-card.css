@@ -253,6 +253,12 @@ ilw-card[clickable] {
     ul.ilw-buttons a,
     ul.ilw-buttons button {
         transition-duration: 0s;
+
+        /* Fix button text colors in clickable cards */
+        color: var(--ilw-button--foreground-color);
+        &:focus, &:hover {
+            color: var(--ilw-button--focused-foreground-color);
+        }
     }
 }
 
