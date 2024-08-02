@@ -211,7 +211,7 @@ ilw-card {
                 vertical-align: middle;
 
                 &::after {
-                    content: "\00BB";
+                    content: "»";
                     display: block;
                     position: absolute;
                     right: 0;
