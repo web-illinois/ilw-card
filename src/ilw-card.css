@@ -11,6 +11,7 @@
         --ilw-card--icon-width: 120px;
         --ilw-card--icon-height: 80px;
         --ilw-card--orange-1: #fd890e;
+
         --ilw-card--orange-gradient: linear-gradient(
             135.14deg,
             var(--il-harvest) 0%,
@@ -40,14 +41,28 @@
         --ilw-card--hover--link: var(--ilw-card--hover--text-color);
     }
 
+    ilw-card {
+        --ilw-button--background-color: #fff;
+        --ilw-button--foreground-color: var(--il-blue);
+        --ilw-button--border-color: var(--il-blue);
+        --ilw-button--focused-background-color: var(--il-blue);
+        --ilw-button--focused-foreground-color: #fff;
+        --ilw-button--focused-border-color: var(--il-blue);
+    }
+
     ilw-card[clickable]:hover {
-        --ilw-button--border-color: #fff;
+        --ilw-button--background-color: #fff;
+        --ilw-button--foreground-color: var(--il-blue);
+        --ilw-button--border-color: var(--il-blue);
+        --ilw-button--focused-background-color: var(--il-blue);
+        --ilw-button--focused-foreground-color: #fff;
+        --ilw-button--focused-border-color: #fff;
     }
 
     ilw-card[theme="gray"] {
         --ilw-card--border-color: var(--il-storm);
         --ilw-card--background: var(--il-storm-lighter-4);
-        --ilw-card--heading-color: var(--il-altgeld);
+        --ilw-card--heading-color: var(--il-blue);
         --ilw-card--icon-color: var(--il-storm-darker-1);
         --ilw-card--text-color: var(--il-storm-darker-1);
 
@@ -63,7 +78,7 @@
         --ilw-card--icon-color: #fff;
         --ilw-card--text-color: #fff;
 
-        --ilw-card--clickable--heading-color: #fff;
+        --ilw-card--clickable--heading-color: var(--il-orange);
         --ilw-card--clickable--border: var(--il-orange);
         --ilw-card--clickable--link: #fff;
 
@@ -73,10 +88,20 @@
         --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1);
         --ilw-card--hover--link: var(--ilw-card--hover--text-color);
 
+        --ilw-button--background-color: transparent;
+        --ilw-button--foreground-color: #fff;
         --ilw-button--border-color: #fff;
+        --ilw-button--focused-background-color: #fff;
+        --ilw-button--focused-foreground-color: var(--il-blue);
+        --ilw-button--focused-border-color: var(--il-blue);
 
         &[clickable]:hover {
+            --ilw-button--background-color: #fff;
             --ilw-button--border-color: var(--il-blue);
+            --ilw-button--foreground-color: var(--il-blue);
+            --ilw-button--focused-background-color: var(--il-blue);
+            --ilw-button--focused-foreground-color: #fff;
+            --ilw-button--focused-border-color: var(--il-blue);
         }
     }
 
@@ -106,6 +131,11 @@
 
         &[clickable]:hover {
             --ilw-button--border-color: var(--il-orange);
+            --ilw-button--background-color: #fff;
+            --ilw-button--foreground-color: var(--il-orange);
+            --ilw-button--focused-background-color: var(--il-orange);
+            --ilw-button--focused-foreground-color: #fff;
+            --ilw-button--focused-border-color: var(--il-orange);
         }
     }
 
@@ -127,23 +157,32 @@
         --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1);
         --ilw-card--hover--link: var(--ilw-card--hover--text-color);
 
+
         --ilw-button--background-color: transparent;
+        --ilw-button--foreground-color: #fff;
         --ilw-button--border-color: #fff;
+        --ilw-button--focused-background-color: #fff;
+        --ilw-button--focused-foreground-color: var(--il-blue);
+        --ilw-button--focused-border-color: var(--il-blue);
 
         &[clickable]:hover {
-            --ilw-button--background-color: var(--il-blue);
+            --ilw-button--background-color: #fff;
             --ilw-button--border-color: var(--il-blue);
+            --ilw-button--foreground-color: var(--il-blue);
+            --ilw-button--focused-background-color: var(--il-blue);
+            --ilw-button--focused-foreground-color: #fff;
+            --ilw-button--focused-border-color: var(--il-blue);
         }
     }
 
     ilw-card[theme="orange-gradient"] {
         --ilw-card--border-color: var(--il-storm);
         --ilw-card--background: var(--ilw-card--orange-gradient);
-        --ilw-card--heading-color: #fff;
+        --ilw-card--heading-color: var(--il-blue);
         --ilw-card--icon-color: var(--il-blue);
         --ilw-card--text-color: var(--il-blue);
 
-        --ilw-card--clickable--heading-color: #fff;
+        --ilw-card--clickable--heading-color: var(--il-blue);
         --ilw-card--clickable--border: var(--il-industrial);
         --ilw-card--clickable--link: var(--il-blue);
 
@@ -154,14 +193,19 @@
         --ilw-card--hover--link: var(--ilw-card--hover--text-color);
 
         --ilw-button--background-color: transparent;
-        --ilw-button--foreground-color: #fff;
-        --ilw-button--border-color: #fff;
+        --ilw-button--foreground-color: var(--il-blue);
+        --ilw-button--border-color: var(--il-blue);
         --ilw-button--focused-background-color: #fff;
         --ilw-button--focused-foreground-color: var(--il-orange);
         --ilw-button--focused-border-color: var(--il-orange);
 
         &[clickable]:hover {
-            --ilw-button--background-color: var(--il-orange);
+            --ilw-button--background-color: transparent;
+            --ilw-button--border-color: var(--il-orange);
+            --ilw-button--foreground-color: var(--il-orange);
+            --ilw-button--focused-background-color: var(--il-orange);
+            --ilw-button--focused-foreground-color: #fff;
+            --ilw-button--focused-border-color: var(--il-orange);
         }
     }
 }

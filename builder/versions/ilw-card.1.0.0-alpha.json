@@ -15,13 +15,18 @@
     "samples": [
         {
             "name": "default",
-            "description": "Plain card with text",
+            "description": "Plain card with heading and text",
             "text": "<h3>Plain Card</h3><p>A card with just a heading and text.</p>"
+        },
+        {
+            "name": "minimal",
+            "description": "Minimal card without a heading",
+            "text": "<p>A minimal card with a <a href=\"#\">link to something</a>.</p>"
         },
         {
             "name": "image",
             "description": "Card with an image and a button",
-            "text": "<img src=\"https://fastly.picsum.photos/id/159/320/200.jpg?hmac=5rPdtfpYQaZopnmOHhelxv5a6GuLOqcRsxSbZsZIQZY\" alt=\"\" slot=\"image\"><h3>Image Card</h3><p>Card with an image and a footer button.</p><div slot=\"footer\"><a href=\"#\" class=\"ilw-button\">Contact Us</a></div>"
+            "text": "<img src=\"https://picsum.photos/570/300\" alt=\"\" slot=\"image\"><h3>Image Card</h3><p>Card with an image and a footer button.</p><div slot=\"footer\"><a href=\"#\" class=\"ilw-button\">Contact Us</a></div>"
         },
         {
             "name": "clickable",
