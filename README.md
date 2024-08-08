@@ -98,6 +98,8 @@ those will utilize the first link in the contents.
 
 ## Accessibility Notes
 
+- Make sure to use the **correct heading level** for the cards based on the rest of your page, if including a heading
+  tag.
 - **Images and icons** on cards should generally be decorative with an empty `alt=""` attribute. If you do need an image
   that needs to be described, consider placing it below the heading. If it's at the top with an alt text,
   it may be confusing for screen readers if it comes before the title of the card.
