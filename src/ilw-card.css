@@ -283,6 +283,7 @@ ilw-card {
             & > h4,
             & > h5,
             & > h6 {
+                color: var(--ilw-card--hover--heading-color);
                 a {
                     color: var(--ilw-card--hover--heading-color);
                 }
