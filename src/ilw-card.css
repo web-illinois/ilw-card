@@ -1,15 +1,15 @@
 @layer base {
     :root {
-        --ilw-card--margin-top: 1rem;
-        --ilw-card--margin-bottom: 1rem;
+        --ilw-card--margin-top: 1rem; /*vardep: Margin above cards*/
+        --ilw-card--margin-bottom: 1rem; /*var: Margin below cards*/
         --ilw-card--aspect-ratio: 16/10;
-        --ilw-card--content-padding-top: 2.5rem;
-        --ilw-card--content-padding-right: 2rem;
-        --ilw-card--content-padding-bottom: 2rem;
-        --ilw-card--content-padding-left: 2rem;
-        --ilw-card--font-size: 1.2em;
-        --ilw-card--icon-width: 120px;
-        --ilw-card--icon-height: 80px;
+        --ilw-card--content-padding-top: 2.5rem; /*var: Top padding around main content in the card*/
+        --ilw-card--content-padding-right: 2rem; /*var: Right padding around main content in the card*/
+        --ilw-card--content-padding-bottom: 2rem; /*var: Bottom padding around main content in the card*/
+        --ilw-card--content-padding-left: 2rem; /*var: Left padding around main content in the card*/
+        --ilw-card--font-size: 1.2em; /*var: Card text font size*/
+        --ilw-card--icon-width: 120px; /*var: Limit for an icon's width*/
+        --ilw-card--icon-height: 80px; /*var: Limit for an icon's height*/
         --ilw-card--orange-1: #fd890e;
 
         --ilw-card--orange-gradient: linear-gradient(
@@ -24,27 +24,27 @@
             var(--il-blue) 100%
         );
 
-        --ilw-card--border-color: var(--il-blue);
-        --ilw-card--background: var(--ilw-background--color);
-        --ilw-card--heading-color: var(--il-orange);
-        --ilw-card--icon-color: var(--ilw-text--color);
-        --ilw-card--text-color: var(--ilw-text--color);
+        --ilw-card--border-color: var(--il-blue); /*var: Color of the border around the card*/
+        --ilw-card--background: var(--ilw-background--color); /*var: CSS background for the card*/
+        --ilw-card--heading-color: var(--il-orange); /*var: Color of the heading in the card*/
+        --ilw-card--icon-color: var(--ilw-text--color); /*var: Color of an icon in the card*/
+        --ilw-card--text-color: var(--ilw-text--color); /*var: Color of text in the card*/
 
         /* Links need to be colored differently depending on the theme */
-        --ilw-card--link: var(--ilw-link--color);
-        --ilw-card--link-focus: var(--ilw-link--focused-color);
-        --ilw-card--link-visited: var(--ilw-link--visited-color);
+        --ilw-card--link: var(--ilw-link--color); /*var: Color for links inside the card */
+        --ilw-card--link-focus: var(--ilw-link--focused-color);  /*var: Focus and hover color for links inside the card*/
+        --ilw-card--link-visited: var(--ilw-link--visited-color);  /*var: Visited link color for inside the card*/
 
-        --ilw-card--clickable--heading-color: var(--ilw-card--heading-color);
+        --ilw-card--clickable--heading-color: var(--ilw-card--heading-color);  /*var: Color of a clickable card heading*/
         --ilw-card--clickable--border: var(--il-orange);
 
         /* Colors for a clickable card when hovered */
-        --ilw-card--hover--background: var(--il-blue);
-        --ilw-card--hover--heading-color: #fff;
-        --ilw-card--hover--text-color: #fff;
-        --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1);
-        --ilw-card--hover--link: var(--ilw-card--hover--text-color);
-        --ilw-card--hover--link-focus: var(--il-orange);
+        --ilw-card--hover--background: var(--il-blue);  /*var: Background for the hover state of a clickable card*/
+        --ilw-card--hover--heading-color: #fff;  /*var: Color of the heading for the hover state of a clickable card*/
+        --ilw-card--hover--text-color: #fff; /*var: Color of text for the hover state of a clickable card*/
+        --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1); /*var: Color of the bottom wider border for the hover state of a clickable card*/
+        --ilw-card--hover--link: var(--ilw-card--hover--text-color); /*var: Link color for links inside the hover state of a clickable card*/
+        --ilw-card--hover--link-focus: var(--il-orange); /*var: Focus and hover color for links inside the hover state of a clickable card*/
     }
 
     ilw-card {

@@ -54,19 +54,34 @@
             "name": "align",
             "description": "Align text inside the card",
             "depreciated": false,
-            "values": ["", "center"]
+            "values": [
+                "",
+                "center"
+            ]
         },
         {
             "name": "clickable",
             "description": "Make the entire card clickable",
             "depreciated": false,
-            "values": ["", "true"]
+            "values": [
+                "",
+                "true"
+            ]
         },
         {
             "name": "aspectRatio",
             "description": "Force image aspect ratio",
             "depreciated": false,
-            "values": ["", "1/1", "2/1", "3/1", "16/10", "1/2", "1/3", "10/16"]
+            "values": [
+                "",
+                "1/1",
+                "2/1",
+                "3/1",
+                "16/10",
+                "1/2",
+                "1/3",
+                "10/16"
+            ]
         }
     ],
     "classes-fixed": [],
@@ -85,22 +100,22 @@
         {
             "name": "--ilw-card--content-padding-top",
             "depreciated": false,
-            "description": "Top padding around text content in the card"
+            "description": "Top padding around main content in the card"
         },
         {
             "name": "--ilw-card--content-padding-right",
             "depreciated": false,
-            "description": "Right padding around text content in the card"
+            "description": "Right padding around main content in the card"
         },
         {
             "name": "--ilw-card--content-padding-bottom",
             "depreciated": false,
-            "description": "Bottom padding around text content in the card"
+            "description": "Bottom padding around main content in the card"
         },
         {
             "name": "--ilw-card--content-padding-left",
             "depreciated": false,
-            "description": "Left padding around text content in the card"
+            "description": "Left padding around main content in the card"
         },
         {
             "name": "--ilw-card--font-size",
@@ -143,19 +158,24 @@
             "description": "Color of text in the card"
         },
         {
+            "name": "--ilw-card--link",
+            "depreciated": false,
+            "description": "Color for links inside the card "
+        },
+        {
+            "name": "--ilw-card--link-focus",
+            "depreciated": false,
+            "description": "Focus and hover color for links inside the card"
+        },
+        {
+            "name": "--ilw-card--link-visited",
+            "depreciated": false,
+            "description": "Visited link color for inside the card"
+        },
+        {
             "name": "--ilw-card--clickable--heading-color",
             "depreciated": false,
             "description": "Color of a clickable card heading"
-        },
-        {
-            "name": "--ilw-card--clickable--border",
-            "depreciated": false,
-            "description": "Color of the bottom wider border in a clickable card"
-        },
-        {
-            "name": "--ilw-card--clickable--link",
-            "depreciated": false,
-            "description": "Link color for links inside a clickable card"
         },
         {
             "name": "--ilw-card--hover--background",
@@ -181,6 +201,11 @@
             "name": "--ilw-card--hover--link",
             "depreciated": false,
             "description": "Link color for links inside the hover state of a clickable card"
+        },
+        {
+            "name": "--ilw-card--hover--link-focus",
+            "depreciated": false,
+            "description": "Focus and hover color for links inside the hover state of a clickable card"
         }
     ]
 }
