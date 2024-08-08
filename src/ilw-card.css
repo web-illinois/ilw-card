@@ -30,18 +30,26 @@
         --ilw-card--icon-color: var(--ilw-text--color);
         --ilw-card--text-color: var(--ilw-text--color);
 
+        /* Links need to be colored differently depending on the theme */
+        --ilw-card--link: var(--ilw-link--color);
+        --ilw-card--link-focus: var(--ilw-link--focused-color);
+        --ilw-card--link-visited: var(--ilw-link--visited-color);
+
         --ilw-card--clickable--heading-color: var(--ilw-card--heading-color);
         --ilw-card--clickable--border: var(--il-orange);
-        --ilw-card--clickable--link: var(--ilw-link--color);
 
+        /* Colors for a clickable card when hovered */
         --ilw-card--hover--background: var(--il-blue);
         --ilw-card--hover--heading-color: #fff;
         --ilw-card--hover--text-color: #fff;
         --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1);
         --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+        --ilw-card--hover--link-focus: var(--il-orange);
     }
 
     ilw-card {
+        /* Buttons also need color changes with themes, but overriding classes on
+           the buttons themselves should take precedence over these. */
         --ilw-button--background-color: #fff;
         --ilw-button--foreground-color: var(--il-blue);
         --ilw-button--border-color: var(--il-blue);
@@ -68,7 +76,7 @@
 
         --ilw-card--clickable--heading-color: var(--il-altgeld);
         --ilw-card--clickable--border: var(--il-altgeld);
-        --ilw-card--clickable--link: var(--ilw-link--color);
+        --ilw-card--link: var(--ilw-link--color);
     }
 
     ilw-card[theme="blue"] {
@@ -77,16 +85,19 @@
         --ilw-card--heading-color: var(--il-orange);
         --ilw-card--icon-color: #fff;
         --ilw-card--text-color: #fff;
+        --ilw-card--link: #fff;
+        --ilw-card--link-focus: var(--il-orange);
+        --ilw-card--link-visited: #fff;
 
         --ilw-card--clickable--heading-color: var(--il-orange);
         --ilw-card--clickable--border: var(--il-orange);
-        --ilw-card--clickable--link: #fff;
 
         --ilw-card--hover--background: #fff;
         --ilw-card--hover--heading-color: var(--il-orange);
         --ilw-card--hover--text-color: var(--ilw-text--color);
         --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1);
         --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+        --ilw-card--hover--link-focus: var(--il-altgeld);
 
         --ilw-button--background-color: transparent;
         --ilw-button--foreground-color: #fff;
@@ -114,13 +125,16 @@
 
         --ilw-card--clickable--heading-color: #fff;
         --ilw-card--clickable--border: var(--il-blue);
-        --ilw-card--clickable--link: var(--il-blue);
+        --ilw-card--link: var(--il-blue);
+        --ilw-card--link-focus: var(--il-blue-lighter-1);
+        --ilw-card--link-visited: var(--il-blue);
 
         --ilw-card--hover--background: #fff;
         --ilw-card--hover--heading-color: var(--il-orange);
         --ilw-card--hover--text-color: var(--ilw-text--color);
         --ilw-card--hover--clickable-border: var(--il-orange);
         --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+        --ilw-card--hover--link-focus: var(--il-altgeld);
 
         --ilw-button--background-color: var(--il-orange);
         --ilw-button--foreground-color: #fff;
@@ -146,16 +160,19 @@
         --ilw-card--heading-color: #fff;
         --ilw-card--icon-color: #fff;
         --ilw-card--text-color: #fff;
+        --ilw-card--link: #fff;
+        --ilw-card--link-focus: var(--il-storm-lighter-3);
+        --ilw-card--link-visited: #fff;
 
         --ilw-card--clickable--heading-color: #fff;
         --ilw-card--clickable--border: var(--il-industrial-lighter-2);
-        --ilw-card--clickable--link: #fff;
 
         --ilw-card--hover--background: #fff;
         --ilw-card--hover--heading-color: var(--il-orange);
         --ilw-card--hover--text-color: var(--ilw-text--color);
         --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1);
         --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+        --ilw-card--hover--link-focus: var(--il-altgeld);
 
 
         --ilw-button--background-color: transparent;
@@ -181,16 +198,19 @@
         --ilw-card--heading-color: var(--il-blue);
         --ilw-card--icon-color: var(--il-blue);
         --ilw-card--text-color: var(--il-blue);
+        --ilw-card--link: var(--il-blue);
+        --ilw-card--link-focus: var(--il-blue-lighter-1);
+        --ilw-card--link-visited: var(--il-blue);
 
         --ilw-card--clickable--heading-color: var(--il-blue);
         --ilw-card--clickable--border: var(--il-industrial);
-        --ilw-card--clickable--link: var(--il-blue);
 
         --ilw-card--hover--background: #fff;
         --ilw-card--hover--heading-color: var(--il-orange);
         --ilw-card--hover--text-color: var(--ilw-text--color);
         --ilw-card--hover--clickable-border: var(--il-orange);
         --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+        --ilw-card--hover--link-focus: var(--il-altgeld);
 
         --ilw-button--background-color: transparent;
         --ilw-button--foreground-color: var(--il-blue);
@@ -221,6 +241,16 @@ ilw-card {
         text-align: center;
     }
 
+    a {
+        color: var(--ilw-card--link);
+        &:visited {
+            color: var(--ilw-card--link-visited);
+        }
+        &:hover {
+            color: var(--ilw-card--link-focus);
+        }
+    }
+
     & > h2,
     & > h3,
     & > h4,
@@ -236,10 +266,6 @@ ilw-card {
     &[clickable] {
         border-bottom: 4px solid var(--ilw-card--clickable--border);
         cursor: pointer;
-
-        a {
-            color: var(--ilw-card--clickable--link);
-        }
 
         & > h2,
         & > h3,
@@ -276,6 +302,9 @@ ilw-card {
 
             a {
                 color: var(--ilw-card--hover--link);
+                &:hover {
+                    color: var(--ilw-card--hover--link-focus);
+                }
             }
 
             & > h2,
@@ -286,6 +315,12 @@ ilw-card {
                 color: var(--ilw-card--hover--heading-color);
                 a {
                     color: var(--ilw-card--hover--heading-color);
+                    &:visited {
+                        color: var(--ilw-card--hover--heading-color);
+                    }
+                    &:hover {
+                        color: var(--ilw-card--hover--heading-color);
+                    }
                 }
             }
         }
