@@ -104,7 +104,14 @@ those will utilize the first link in the contents.
   that needs to be described, consider placing it below the heading. If it's at the top with an alt text,
   it may be confusing for screen readers if it comes before the title of the card.
 - **Centered text** can be harder to read, so avoid longer card text that's centered.
-- Make sure **links and buttons** are descriptive, using `ilw-sr-only` if needed to add context.
+- Make sure **links and buttons** are descriptive, using `ilw-sr-only` if needed to add context. For example:
+
+```html
+<a href="#" class="ilw-button">Learn More <span class="ilw-sr-only">About Cards</span></a>
+```
+
+Note that [WCAG Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name) specifies that the
+name and label must begin with the same words, so the hidden portion should be at the end.
 
 ## External References
 
