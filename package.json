@@ -1,19 +1,27 @@
 {
     "name": "@illinois-toolkit/ilw-card",
-    "description": "One paragraph description of the component.",
+    "description": "Illinois Toolkit: A card component that can be used as a container for grouping information, reminiscent of a physical note or playing card.",
     "repository": "github:web-illinois/ilw-card",
     "private": false,
     "version": "1.0.0-alpha.0",
     "type": "module",
+    "files": [
+      "src/**",
+      "dist/**",
+      "builder/**"
+    ],
     "exports": {
         ".": {
-            "import": "./src/ilw-card.js"
+            "import": "./src/ilw-card.js",
+            "require": "./src/ilw-card.cjs",
+            "default": "./src/ilw-card.js"
         }
     },
     "scripts": {
         "dev": "vite",
         "build": "vite build --config vite.build.config.js --emptyOutDir",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "prepack": "npm run build
     },
     "dependencies": {
         "lit": "3.1.3"
