@@ -37,7 +37,7 @@ as long as you include them as inline SVG rather than with an `<img>` tag.
 With other icons, you may need to apply the change. For reference, here is the relevant CSS for the Illinois icons:
 
 ```css
-ilw-card[clickable] path.cls-1 {
+ilw-card path.cls-1 {
     fill: currentColor;
 }
 ```
