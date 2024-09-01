@@ -27,8 +27,7 @@ class Card extends LitElement {
         this.clickable = false;
         this._hasGraphic = false;
 
-        // Make the first link in a clickable card be the whole card's link
-        this.addEventListener("click", (ev) => {
+        this._click = (ev) => {
             /**
              * @type {HTMLElement}
              */
@@ -38,7 +37,7 @@ class Card extends LitElement {
                 const link = this.querySelector("a");
                 link.click();
             }
-        });
+        }
     }
 
     /**
@@ -74,7 +73,8 @@ class Card extends LitElement {
                 : null,
         };
         return html`
-            <article class=${classMap(classes)} style=${styleMap(styles)}>
+            <article class=${classMap(classes)} style=${styleMap(styles)}
+                     @click="${this.clickable ? this._click : null}">
                 <div class="card-graphic">
                     <div class="card-image">
                         <slot

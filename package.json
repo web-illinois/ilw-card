@@ -1,9 +1,9 @@
 {
     "name": "@illinois-toolkit/ilw-card",
-    "description": "One paragraph description of the component.",
+    "description": "Illinois Toolkit: A card component that can be used as a container for grouping information.",
     "repository": "github:web-illinois/ilw-card",
     "private": false,
-    "version": "1.0.0-alpha.0",
+    "version": "1.0.0-alpha1",
     "type": "module",
     "exports": {
         ".": {
