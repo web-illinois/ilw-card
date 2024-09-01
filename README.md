@@ -36,6 +36,12 @@ as long as you include them as inline SVG rather than with an `<img>` tag.
 
 With other icons, you may need to apply the change. For reference, here is the relevant CSS for the Illinois icons:
 
+```css
+ilw-card path.cls-1 {
+    fill: currentColor;
+}
+```
+
 ### Buttons in cards
 
 The card component overrides certain aspects of `ilw-button` and `ilw-buttons` elements to make them match
@@ -44,12 +50,6 @@ added to the buttons (eg. `ilw-theme-orange`).
 
 For clickable cards, the CSS background animation is also removed, because it doesn't really work with the card
 transition.
-
-```css
-ilw-card[clickable] path.cls-1 {
-    fill: currentColor;
-}
-```
 
 ## Code Examples
 
