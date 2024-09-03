@@ -3,7 +3,7 @@
     "description": "Illinois Toolkit: A card component that can be used as a container for grouping information, reminiscent of a physical note or playing card.",
     "repository": "github:web-illinois/ilw-card",
     "private": false,
-    "version": "1.0.0-alpha.0",
+    "version": "1.0.0-alpha1",
     "type": "module",
     "files": [
       "src/**",

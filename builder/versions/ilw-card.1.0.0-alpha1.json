@@ -5,10 +5,10 @@
     "type": "web component",
     "element-name": "ilw-card",
     "description": "A card component that can be used as a container for grouping information.",
-    "version": "1.0.0-alpha",
+    "version": "1.0.0-alpha1",
     "date": "08/02/2024",
-    "css": "https://dev.toolkit.illinois.edu/ilw-card/1.0.0-alpha/ilw-card.css",
-    "js": "https://dev.toolkit.illinois.edu/ilw-card/1.0.0-alpha/ilw-card.js",
+    "css": "https://dev.toolkit.illinois.edu/ilw-card/1.0.0-alpha1/ilw-card.css",
+    "js": "https://dev.toolkit.illinois.edu/ilw-card/1.0.0-alpha1/ilw-card.js",
     "production": false,
     "notes": "",
     "parent-style": "margin: 0 auto; max-width: 400px; padding: 15px;",
@@ -90,122 +90,122 @@
         {
             "name": "--ilw-card--margin-top",
             "depreciated": false,
-            "description": "Margin above cards"
+            "description": "Margin above cards [default: 1rem]"
         },
         {
             "name": "--ilw-card--margin-bottom",
             "depreciated": false,
-            "description": "Margin below cards"
+            "description": "Margin below cards [default: 1rem]"
         },
         {
             "name": "--ilw-card--content-padding-top",
             "depreciated": false,
-            "description": "Top padding around main content in the card"
+            "description": "Top padding around main content in the card [default: 2.5rem]"
         },
         {
             "name": "--ilw-card--content-padding-right",
             "depreciated": false,
-            "description": "Right padding around main content in the card"
+            "description": "Right padding around main content in the card [default: 2rem]"
         },
         {
             "name": "--ilw-card--content-padding-bottom",
             "depreciated": false,
-            "description": "Bottom padding around main content in the card"
+            "description": "Bottom padding around main content in the card [default: 2rem]"
         },
         {
             "name": "--ilw-card--content-padding-left",
             "depreciated": false,
-            "description": "Left padding around main content in the card"
+            "description": "Left padding around main content in the card [default: 2rem]"
         },
         {
             "name": "--ilw-card--font-size",
             "depreciated": false,
-            "description": "Card text font size"
+            "description": "Card text font size [default: 1.2em]"
         },
         {
             "name": "--ilw-card--icon-width",
             "depreciated": false,
-            "description": "Limit for an icon's width"
+            "description": "Limit for an icon's width [default: 120px]"
         },
         {
             "name": "--ilw-card--icon-height",
             "depreciated": false,
-            "description": "Limit for an icon's height"
+            "description": "Limit for an icon's height [default: 80px]"
         },
         {
             "name": "--ilw-card--border-color",
             "depreciated": false,
-            "description": "Color of the border around the card"
+            "description": "Color of the border around the card [default: var(--il-blue)]"
         },
         {
             "name": "--ilw-card--background",
             "depreciated": false,
-            "description": "CSS background for the card"
+            "description": "CSS background for the card [default: var(--ilw-background--color)]"
         },
         {
             "name": "--ilw-card--heading-color",
             "depreciated": false,
-            "description": "Color of the heading in the card"
+            "description": "Color of the heading in the card [default: var(--il-orange)]"
         },
         {
             "name": "--ilw-card--icon-color",
             "depreciated": false,
-            "description": "Color of an icon in the card"
+            "description": "Color of an icon in the card [default: var(--ilw-text--color)]"
         },
         {
             "name": "--ilw-card--text-color",
             "depreciated": false,
-            "description": "Color of text in the card"
+            "description": "Color of text in the card [default: var(--ilw-text--color)]"
         },
         {
             "name": "--ilw-card--link",
             "depreciated": false,
-            "description": "Color for links inside the card "
+            "description": "Color for links inside the card  [default: var(--ilw-link--color)]"
         },
         {
             "name": "--ilw-card--link-focus",
             "depreciated": false,
-            "description": "Focus and hover color for links inside the card"
+            "description": "Focus and hover color for links inside the card [default: var(--ilw-link--focused-color)]"
         },
         {
             "name": "--ilw-card--link-visited",
             "depreciated": false,
-            "description": "Visited link color for inside the card"
+            "description": "Visited link color for inside the card [default: var(--ilw-link--visited-color)]"
         },
         {
             "name": "--ilw-card--clickable--heading-color",
             "depreciated": false,
-            "description": "Color of a clickable card heading"
+            "description": "Color of a clickable card heading [default: var(--ilw-card--heading-color)]"
         },
         {
             "name": "--ilw-card--hover--background",
             "depreciated": false,
-            "description": "Background for the hover state of a clickable card"
+            "description": "Background for the hover state of a clickable card [default: var(--il-blue)]"
         },
         {
             "name": "--ilw-card--hover--heading-color",
             "depreciated": false,
-            "description": "Color of the heading for the hover state of a clickable card"
+            "description": "Color of the heading for the hover state of a clickable card [default: #fff]"
         },
         {
             "name": "--ilw-card--hover--text-color",
             "depreciated": false,
-            "description": "Color of text for the hover state of a clickable card"
+            "description": "Color of text for the hover state of a clickable card [default: #fff]"
         },
         {
             "name": "--ilw-card--hover--clickable-border",
             "depreciated": false,
-            "description": "Color of the bottom wider border for the hover state of a clickable card"
+            "description": "Color of the bottom wider border for the hover state of a clickable card [default: var(--il-industrial-lighter-1)]"
         },
         {
             "name": "--ilw-card--hover--link",
             "depreciated": false,
-            "description": "Link color for links inside the hover state of a clickable card"
+            "description": "Link color for links inside the hover state of a clickable card [default: var(--ilw-card--hover--text-color)]"
         },
         {
             "name": "--ilw-card--hover--link-focus",
             "depreciated": false,
-            "description": "Focus and hover color for links inside the hover state of a clickable card"
+            "description": "Focus and hover color for links inside the hover state of a clickable card [default: var(--il-orange)]"
         }
     ]
 }

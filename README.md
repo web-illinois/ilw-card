@@ -113,6 +113,22 @@ those will utilize the first link in the contents.
 Note that [WCAG Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name) specifies that the
 name and label must begin with the same words, so the hidden portion should be at the end.
 
+## Upgrade Process
+
+When upgrading from the v2 toolkit component, the following changes are needed:
+
+- Rename all `il-card` to `ilw-card`.
+- Rename all `il-clickable-card` to `ilw-card` and add the `clickable` attribute.
+- Add `slot="image"` to the `img` tag in cards with images.
+- Add `slot="icon"` to the icon in cards with icons.
+- Replace uses of the theme classes with an attribute:
+  - `class="il-theme-gray"` -> `theme="gray"`
+  - `class="il-theme-blue"` -> `theme="blue"`
+  - `class="il-theme-white"` -> `theme="white"`
+  - `class="il-theme-blue-gradient"` -> `theme="blue-gradient"`
+  - `class="il-theme-orange"` -> `theme="orange"`
+  - `class="il-theme-orange-gradient"` -> `theme="orange-gradient"`
+
 ## External References
 
 - https://www.nngroup.com/articles/cards-component/

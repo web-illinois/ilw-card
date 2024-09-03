@@ -1,6 +1,6 @@
 @layer base {
     :root {
-        --ilw-card--margin-top: 1rem; /*vardep: Margin above cards*/
+        --ilw-card--margin-top: 1rem; /*var: Margin above cards*/
         --ilw-card--margin-bottom: 1rem; /*var: Margin below cards*/
         --ilw-card--aspect-ratio: 16/10;
         --ilw-card--content-padding-top: 2.5rem; /*var: Top padding around main content in the card*/
