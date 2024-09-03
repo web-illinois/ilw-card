@@ -7,7 +7,8 @@
         --ilw-card--content-padding-right: 2rem; /*var: Right padding around main content in the card*/
         --ilw-card--content-padding-bottom: 2rem; /*var: Bottom padding around main content in the card*/
         --ilw-card--content-padding-left: 2rem; /*var: Left padding around main content in the card*/
-        --ilw-card--font-size: 1.2em; /*var: Card text font size*/
+        --ilw-card--font-size: 1.2rem; /*var: Card text font size*/
+        --ilw-card--heading--font-size: 1.45em; /*var: Font size for a card's heading*/
         --ilw-card--icon-width: 120px; /*var: Limit for an icon's width*/
         --ilw-card--icon-height: 80px; /*var: Limit for an icon's height*/
         --ilw-card--orange-1: #fd890e;
@@ -257,6 +258,7 @@ ilw-card {
     & > h5,
     & > h6 {
         color: var(--ilw-card--heading-color);
+        font-size: var(--ilw-card--heading--font-size);
 
         &:first-of-type {
             margin-top: 0;
@@ -325,6 +327,12 @@ ilw-card {
             }
         }
     }
+
+    > [slot=image] {
+        img {
+            display: block;
+        }
+    }
 }
 
 ilw-card[clickable] {
@@ -340,6 +348,10 @@ ilw-card[clickable] {
             color: var(--ilw-button--focused-foreground-color);
         }
     }
+}
+
+ilw-card[aspect-ratio] > [slot=image] {
+
 }
 
 /* Make il icons color currentColor in cards */

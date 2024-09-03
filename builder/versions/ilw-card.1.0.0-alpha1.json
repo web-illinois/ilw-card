@@ -120,7 +120,12 @@
         {
             "name": "--ilw-card--font-size",
             "depreciated": false,
-            "description": "Card text font size [default: 1.2em]"
+            "description": "Card text font size [default: 1.2rem]"
+        },
+        {
+            "name": "--ilw-card--heading--font-size",
+            "depreciated": false,
+            "description": "Font size for a card's heading [default: 1.45em]"
         },
         {
             "name": "--ilw-card--icon-width",
