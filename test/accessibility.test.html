@@ -1,0 +1,32 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
+    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-global/3.0.0-alpha/ilw-global.css">
+</head>
+<body>
+<script type="module">
+    import { html, fixture, expect } from "@open-wc/testing";
+    import "../dist/ilw-card.js";
+
+    async function basicCard() {
+        return fixture(html`
+            <ilw-card>
+                <ilw-card>
+                    <h3>Plain Card</h3>
+                    <p>A minimal card with a <a href="#test">link to something</a>.</p>
+                </ilw-card>
+            </ilw-card>
+        `);
+    }
+
+    describe("ilw-card", () => {
+        it("has slotted elements", async () => {
+            const el = await basicCard();
+
+            el.should.contain("h3");
+            el.should.contain("p");
+        });
+    });
+</script>
+</body>
+</html>
