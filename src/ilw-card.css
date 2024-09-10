@@ -244,8 +244,10 @@ ilw-card {
 
     a {
         color: var(--ilw-card--link);
-        &:visited {
-            color: var(--ilw-card--link-visited);
+        &:focus {
+            color: var(--ilw-link--focus-color);
+            background-color: var(--ilw-link--focus-background-color);
+            outline: var(--ilw-link--focus-outline);
         }
         &:hover {
             color: var(--ilw-card--link-focus);
@@ -282,6 +284,12 @@ ilw-card {
                 position: relative;
                 vertical-align: middle;
 
+                &:focus {
+                    color: var(--ilw-link--focus-color);
+                    background-color: var(--ilw-link--focus-background-color);
+                    outline: var(--ilw-link--focus-outline);
+                }
+
                 &::after {
                     content: "»";
                     display: block;
@@ -304,6 +312,11 @@ ilw-card {
 
             a {
                 color: var(--ilw-card--hover--link);
+                &:focus {
+                    color: var(--ilw-link--focus-color);
+                    background-color: var(--ilw-link--focus-background-color);
+                    outline: var(--ilw-link--focus-outline);
+                }
                 &:hover {
                     color: var(--ilw-card--hover--link-focus);
                 }
@@ -317,11 +330,10 @@ ilw-card {
                 color: var(--ilw-card--hover--heading-color);
                 a {
                     color: var(--ilw-card--hover--heading-color);
-                    &:visited {
-                        color: var(--ilw-card--hover--heading-color);
-                    }
-                    &:hover {
-                        color: var(--ilw-card--hover--heading-color);
+                    &:focus {
+                        color: var(--ilw-link--focus-color);
+                        background-color: var(--ilw-link--focus-background-color);
+                        outline: var(--ilw-link--focus-outline);
                     }
                 }
             }
@@ -344,8 +356,12 @@ ilw-card[clickable] {
 
         /* Fix button text colors in clickable cards */
         color: var(--ilw-button--foreground-color);
-        &:focus, &:hover {
+        &:hover {
             color: var(--ilw-button--focused-foreground-color);
+        }
+        &:focus {
+            color: var(--ilw-link--focus-color);
+            outline: var(--ilw-link--focus-outline);
         }
     }
 }
