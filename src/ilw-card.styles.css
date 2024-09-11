@@ -1,0 +1,305 @@
+/* Styleable variables are in the base layer so they can be overridden easily */
+@layer base {
+    :host {
+        --ilw-card--margin-top: 1rem; /*var: Margin above cards*/
+        --ilw-card--margin-bottom: 1rem; /*var: Margin below cards*/
+        --ilw-card--aspect-ratio: 16/10;
+        --ilw-card--content-padding-top: 2.5rem; /*var: Top padding around main content in the card*/
+        --ilw-card--content-padding-right: 2rem; /*var: Right padding around main content in the card*/
+        --ilw-card--content-padding-bottom: 2rem; /*var: Bottom padding around main content in the card*/
+        --ilw-card--content-padding-left: 2rem; /*var: Left padding around main content in the card*/
+        --ilw-card--font-size: 1.2rem; /*var: Card text font size*/
+        --ilw-card--heading--font-size: 1.45em; /*var: Font size for a card's heading*/
+        --ilw-card--icon-width: 120px; /*var: Limit for an icon's width*/
+        --ilw-card--icon-height: 80px; /*var: Limit for an icon's height*/
+        --ilw-card--orange-1: #fd890e;
+
+        --ilw-card--orange-gradient: linear-gradient(
+                135.14deg,
+                var(--il-harvest) 0%,
+                var(--ilw-card--orange-1) 30.44%,
+                var(--il-orange) 100.75%
+        );
+        --ilw-card--blue-gradient: linear-gradient(
+                160deg,
+                var(--il-industrial) 20%,
+                var(--il-blue) 100%
+        );
+
+        --ilw-card--border-color: var(--il-blue); /*var: Color of the border around the card*/
+        --ilw-card--background: var(--ilw-background--color); /*var: CSS background for the card*/
+        --ilw-card--heading-color: var(--il-orange); /*var: Color of the heading in the card*/
+        --ilw-card--icon-color: var(--ilw-text--color); /*var: Color of an icon in the card*/
+        --ilw-card--text-color: var(--ilw-text--color); /*var: Color of text in the card*/
+
+        /* Links need to be colored differently depending on the theme */
+        --ilw-card--link: var(--ilw-link--color); /*var: Color for links inside the card */
+        --ilw-card--link-focus: var(--ilw-link--focused-color); /*var: Focus and hover color for links inside the card*/
+        --ilw-card--link-visited: var(--ilw-link--visited-color); /*var: Visited link color for inside the card*/
+
+        --ilw-card--clickable--heading-color: var(--ilw-card--heading-color); /*var: Color of a clickable card heading*/
+        --ilw-card--clickable--border: var(--il-orange);
+
+        /* Colors for a clickable card when hovered */
+        --ilw-card--hover--background: var(--il-blue); /*var: Background for the hover state of a clickable card*/
+        --ilw-card--hover--heading-color: #fff; /*var: Color of the heading for the hover state of a clickable card*/
+        --ilw-card--hover--text-color: #fff; /*var: Color of text for the hover state of a clickable card*/
+        --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1); /*var: Color of the bottom wider border for the hover state of a clickable card*/
+        --ilw-card--hover--link: var(--ilw-card--hover--text-color); /*var: Link color for links inside the hover state of a clickable card*/
+        --ilw-card--hover--link-focus: var(--il-orange); /*var: Focus and hover color for links inside the hover state of a clickable card*/
+
+
+        /* Buttons also need color changes with themes, but overriding classes on
+           the buttons themselves should take precedence over these. */
+        --ilw-button--background-color: #fff;
+        --ilw-button--foreground-color: var(--il-blue);
+        --ilw-button--border-color: var(--il-blue);
+        --ilw-button--focused-background-color: var(--il-blue);
+        --ilw-button--focused-foreground-color: #fff;
+        --ilw-button--focused-border-color: var(--il-blue);
+    }
+
+    :host([clickable]:hover) {
+        --ilw-button--background-color: #fff;
+        --ilw-button--foreground-color: var(--il-blue);
+        --ilw-button--border-color: var(--il-blue);
+        --ilw-button--focused-background-color: var(--il-blue);
+        --ilw-button--focused-foreground-color: #fff;
+        --ilw-button--focused-border-color: #fff;
+    }
+
+    :host([theme="gray"]) {
+        --ilw-card--border-color: var(--il-storm);
+        --ilw-card--background: var(--il-storm-lighter-4);
+        --ilw-card--heading-color: var(--il-blue);
+        --ilw-card--icon-color: var(--il-storm-darker-1);
+        --ilw-card--text-color: var(--il-storm-darker-1);
+
+        --ilw-card--clickable--heading-color: var(--il-altgeld);
+        --ilw-card--clickable--border: var(--il-altgeld);
+        --ilw-card--link: var(--ilw-link--color);
+    }
+
+    :host([theme="blue"]) {
+        --ilw-card--border-color: var(--il-storm);
+        --ilw-card--background: var(--il-blue);
+        --ilw-card--heading-color: var(--il-orange);
+        --ilw-card--icon-color: #fff;
+        --ilw-card--text-color: #fff;
+        --ilw-card--link: #fff;
+        --ilw-card--link-focus: var(--il-orange);
+        --ilw-card--link-visited: #fff;
+
+        --ilw-card--clickable--heading-color: var(--il-orange);
+        --ilw-card--clickable--border: var(--il-orange);
+
+        --ilw-card--hover--background: #fff;
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
+        --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1);
+        --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+        --ilw-card--hover--link-focus: var(--il-altgeld);
+
+        --ilw-button--background-color: transparent;
+        --ilw-button--foreground-color: #fff;
+        --ilw-button--border-color: #fff;
+        --ilw-button--focused-background-color: #fff;
+        --ilw-button--focused-foreground-color: var(--il-blue);
+        --ilw-button--focused-border-color: var(--il-blue);
+    }
+
+    :host([clickable]:hover) {
+        --ilw-button--background-color: #fff;
+        --ilw-button--border-color: var(--il-blue);
+        --ilw-button--foreground-color: var(--il-blue);
+        --ilw-button--focused-background-color: var(--il-blue);
+        --ilw-button--focused-foreground-color: #fff;
+        --ilw-button--focused-border-color: var(--il-blue);
+    }
+
+    :host([theme="orange"]) {
+        --ilw-card--border-color: var(--il-storm);
+        --ilw-card--background: var(--il-orange);
+        --ilw-card--heading-color: #fff;
+        --ilw-card--icon-color: var(--il-blue);
+        --ilw-card--text-color: var(--il-blue);
+
+        --ilw-card--clickable--heading-color: #fff;
+        --ilw-card--clickable--border: var(--il-blue);
+        --ilw-card--link: var(--il-blue);
+        --ilw-card--link-focus: var(--il-blue-lighter-1);
+        --ilw-card--link-visited: var(--il-blue);
+
+        --ilw-card--hover--background: #fff;
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
+        --ilw-card--hover--clickable-border: var(--il-orange);
+        --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+        --ilw-card--hover--link-focus: var(--il-altgeld);
+
+        --ilw-button--background-color: var(--il-orange);
+        --ilw-button--foreground-color: #fff;
+        --ilw-button--border-color: #fff;
+        --ilw-button--focused-background-color: #fff;
+        --ilw-button--focused-foreground-color: var(--il-orange);
+        --ilw-button--focused-border-color: var(--il-orange);
+    }
+
+    :host([theme="orange"][clickable]:hover) {
+        --ilw-button--border-color: var(--il-orange);
+        --ilw-button--background-color: #fff;
+        --ilw-button--foreground-color: var(--il-orange);
+        --ilw-button--focused-background-color: var(--il-orange);
+        --ilw-button--focused-foreground-color: #fff;
+        --ilw-button--focused-border-color: var(--il-orange);
+    }
+
+    :host([theme="blue-gradient"]) {
+        --ilw-card--border-color: var(--il-storm);
+        --ilw-card--background: var(--ilw-card--blue-gradient);
+
+        --ilw-card--heading-color: #fff;
+        --ilw-card--icon-color: #fff;
+        --ilw-card--text-color: #fff;
+        --ilw-card--link: #fff;
+        --ilw-card--link-focus: var(--il-storm-lighter-3);
+        --ilw-card--link-visited: #fff;
+
+        --ilw-card--clickable--heading-color: #fff;
+        --ilw-card--clickable--border: var(--il-industrial-lighter-2);
+
+        --ilw-card--hover--background: #fff;
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
+        --ilw-card--hover--clickable-border: var(--il-industrial-lighter-1);
+        --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+        --ilw-card--hover--link-focus: var(--il-altgeld);
+
+
+        --ilw-button--background-color: transparent;
+        --ilw-button--foreground-color: #fff;
+        --ilw-button--border-color: #fff;
+        --ilw-button--focused-background-color: #fff;
+        --ilw-button--focused-foreground-color: var(--il-blue);
+        --ilw-button--focused-border-color: var(--il-blue);
+    }
+
+    :host([theme="blue-gradient"][clickable]:hover) {
+        --ilw-button--background-color: #fff;
+        --ilw-button--border-color: var(--il-blue);
+        --ilw-button--foreground-color: var(--il-blue);
+        --ilw-button--focused-background-color: var(--il-blue);
+        --ilw-button--focused-foreground-color: #fff;
+        --ilw-button--focused-border-color: var(--il-blue);
+    }
+
+    :host([theme="orange-gradient"] ) {
+        --ilw-card--border-color: var(--il-storm);
+        --ilw-card--background: var(--ilw-card--orange-gradient);
+        --ilw-card--heading-color: var(--il-blue);
+        --ilw-card--icon-color: var(--il-blue);
+        --ilw-card--text-color: var(--il-blue);
+        --ilw-card--link: var(--il-blue);
+        --ilw-card--link-focus: var(--il-blue-lighter-1);
+        --ilw-card--link-visited: var(--il-blue);
+
+        --ilw-card--clickable--heading-color: var(--il-blue);
+        --ilw-card--clickable--border: var(--il-industrial);
+
+        --ilw-card--hover--background: #fff;
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
+        --ilw-card--hover--clickable-border: var(--il-orange);
+        --ilw-card--hover--link: var(--ilw-card--hover--text-color);
+        --ilw-card--hover--link-focus: var(--il-altgeld);
+
+        --ilw-button--background-color: transparent;
+        --ilw-button--foreground-color: var(--il-blue);
+        --ilw-button--border-color: var(--il-blue);
+        --ilw-button--focused-background-color: #fff;
+        --ilw-button--focused-foreground-color: var(--il-orange);
+        --ilw-button--focused-border-color: var(--il-orange);
+    }
+
+    :host([theme="orange-gradient"][clickable]:hover) {
+        --ilw-button--background-color: transparent;
+        --ilw-button--border-color: var(--il-orange);
+        --ilw-button--foreground-color: var(--il-orange);
+        --ilw-button--focused-background-color: var(--il-orange);
+        --ilw-button--focused-foreground-color: #fff;
+        --ilw-button--focused-border-color: var(--il-orange);
+    }
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--ilw-card--border-color);
+    background: var(--ilw-card--background);
+    margin-top: var(--ilw-card--margin-top);
+    margin-bottom: var(--ilw-card--margin-bottom);
+    color: var(--ilw-card--text-color);
+}
+
+:host[align="center"] {
+    text-align: center;
+}
+
+article {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.card-graphic {
+    display: none;
+    position: relative;
+}
+
+.graphic .card-graphic {
+    display: block;
+    min-height: var(--ilw-card--icon-height);
+}
+
+.card-icon {
+    position: absolute;
+    top: var(--ilw-card--content-padding-top);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ::slotted(*) {
+        max-height: var(--ilw-card--icon-height);
+        max-width: var(--ilw-card--icon-width);
+    }
+}
+
+.force-ratio .card-graphic {
+    aspect-ratio: var(--ilw-card--aspect-ratio);
+    width: 100%;
+
+    ::slotted([slot="image"]) {
+        aspect-ratio: var(--ilw-card--aspect-ratio);
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.card-image ::slotted(*) {
+    width: 100%;
+}
+
+.card-content {
+    font-size: var(--ilw-card--font-size);
+    padding: var(--ilw-card--content-padding-top) var(--ilw-card--content-padding-right) 0 var(--ilw-card--content-padding-left);
+    flex: 1;
+}
+
+.card-footer {
+    padding: 0 var(--ilw-card--content-padding-right) var(--ilw-card--content-padding-bottom) var(--ilw-card--content-padding-left);
+}

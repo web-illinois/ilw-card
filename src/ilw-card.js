@@ -1,5 +1,5 @@
-import { LitElement, html } from "lit";
-import styles from "./ilw-card.styles";
+import { LitElement, html, unsafeCSS } from "lit";
+import styles from "./ilw-card.styles.css?inline";
 import "./ilw-card.css";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -16,7 +16,7 @@ class Card extends LitElement {
     }
 
     static get styles() {
-        return styles;
+        return unsafeCSS(styles);
     }
 
     constructor() {
