@@ -1,8 +1,8 @@
 /* Styleable variables are in the base layer so they can be overridden easily */
 @layer base {
     :host {
-        --ilw-card--margin-top: 1rem; /*var: Margin above cards*/
-        --ilw-card--margin-bottom: 1rem; /*var: Margin below cards*/
+        --ilw-card--margin-top: 0; /*var: Margin above cards*/
+        --ilw-card--margin-bottom: 0; /*var: Margin below cards*/
         --ilw-card--aspect-ratio: 16/10;
         --ilw-card--content-padding-top: 2.5rem; /*var: Top padding around main content in the card*/
         --ilw-card--content-padding-right: 2rem; /*var: Right padding around main content in the card*/
@@ -234,6 +234,7 @@
 :host {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     border: 1px solid var(--ilw-card--border-color);
     background: var(--ilw-card--background);
     margin-top: var(--ilw-card--margin-top);
