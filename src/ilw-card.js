@@ -12,6 +12,7 @@ class Card extends LitElement {
             align: {},
             aspectRatio: {},
             _hasGraphic: { state: true, type: Boolean },
+            _iconOnly: { state: true, type: Boolean },
         };
     }
 
@@ -26,6 +27,7 @@ class Card extends LitElement {
         this.aspectRatio = "";
         this.clickable = false;
         this._hasGraphic = false;
+        this._iconOnly = false;
 
         this._click = (ev) => {
             /**
@@ -54,6 +56,7 @@ class Card extends LitElement {
         }
         const icons = this.shadowRoot.querySelector("slot[name=icon]");
         if (icons.assignedElements().length > 0) {
+            this._iconOnly = true;
             this._hasGraphic = true;
             return;
         }
@@ -66,6 +69,7 @@ class Card extends LitElement {
             // Only add the force-ratio class if we are in fact forcing an aspect ratio
             "force-ratio": !!this.aspectRatio,
             graphic: this._hasGraphic,
+            "icon-only": this._iconOnly
         };
         const styles = {
             "--ilw-card--aspect-ratio": this.aspectRatio

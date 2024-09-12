@@ -265,7 +265,7 @@ article {
 
 .card-icon {
     position: absolute;
-    top: var(--ilw-card--content-padding-top);
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -298,6 +298,10 @@ article {
     font-size: var(--ilw-card--font-size);
     padding: var(--ilw-card--content-padding-top) var(--ilw-card--content-padding-right) 0 var(--ilw-card--content-padding-left);
     flex: 1;
+}
+
+.icon-only .card-content {
+    padding-top: 0;
 }
 
 .card-footer {
