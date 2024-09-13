@@ -286,13 +286,13 @@ article {
 
     ::slotted([slot="image"]) {
         aspect-ratio: var(--ilw-card--aspect-ratio);
-        width: 100%;
+        width: 100% !important; /* use important here because this should never be anything else */
         object-fit: cover;
     }
 }
 
 .card-image ::slotted(*) {
-    width: 100%;
+    width: 100% !important; /* use important here because this should never be anything else */
 }
 
 .card-content {
