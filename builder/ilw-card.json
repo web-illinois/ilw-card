@@ -5,6 +5,7 @@
     "type": "web component",
     "element-name": "ilw-card",
     "description": "A card component that can be used as a container for grouping information.",
+    "purpose": "Organize content using cards, with image and icon support.",
     "toolkit-version": "",
     "production-version": "",
     "development-version": "1.0-beta"
