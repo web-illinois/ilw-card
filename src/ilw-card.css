@@ -87,6 +87,9 @@ ilw-card {
                 color: var(--ilw-card--hover--heading-color);
                 a {
                     color: var(--ilw-card--hover--heading-color);
+                    &:hover {
+                        color: var(--ilw-card--hover--heading-color);
+                    }
                     &:focus {
                         color: var(--ilw-link--focus-color);
                         background-color: var(--ilw-link--focus-background-color);
