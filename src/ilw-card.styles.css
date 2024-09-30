@@ -108,7 +108,7 @@
         --ilw-button--focused-border-color: var(--il-blue);
     }
 
-    :host([clickable]:hover) {
+    :host([theme="blue"][clickable]:hover) {
         --ilw-button--background-color: #fff;
         --ilw-button--border-color: var(--il-blue);
         --ilw-button--foreground-color: var(--il-blue);
