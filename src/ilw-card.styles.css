@@ -257,6 +257,7 @@ article {
 .card-graphic {
     display: none;
     position: relative;
+    order: 0;
 }
 
 .graphic .card-graphic {
@@ -299,6 +300,7 @@ article {
     font-size: var(--ilw-card--font-size);
     padding: var(--ilw-card--content-padding-top) var(--ilw-card--content-padding-right) 0 var(--ilw-card--content-padding-left);
     flex: 1;
+    order: 1;
 }
 
 .icon-only .card-content {
@@ -307,4 +309,5 @@ article {
 
 .card-footer {
     padding: 0 var(--ilw-card--content-padding-right) var(--ilw-card--content-padding-bottom) var(--ilw-card--content-padding-left);
+    order: 2;
 }

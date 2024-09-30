@@ -100,9 +100,9 @@ those will utilize the first link in the contents.
 
 - Make sure to use the **correct heading level** for the cards based on the rest of your page, if including a heading
   tag.
-- **Images and icons** on cards should generally be decorative with an empty `alt=""` attribute. If you do need an image
-  that needs to be described, consider placing it below the heading. If it's at the top with an alt text,
-  it may be confusing for screen readers if it comes before the title of the card.
+- **Images and icons** on cards should generally be decorative with an empty `alt=""` attribute. If an alt text is
+  specified, the image comes after the card content in the DOM. This ensures the heading is first for screen
+  readers, and the image is under that heading.
 - **Centered text** can be harder to read, so avoid longer card text that's centered.
 - Make sure **links and buttons** are descriptive, using `ilw-sr-only` if needed to add context. For example:
 

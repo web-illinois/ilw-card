@@ -79,6 +79,9 @@ class Card extends LitElement {
         return html`
             <article class=${classMap(classes)} style=${styleMap(styles)}
                      @click="${this.clickable ? this._click : null}">
+                <div class="card-content">
+                    <slot></slot>
+                </div>
                 <div class="card-graphic">
                     <div class="card-image">
                         <slot
@@ -92,9 +95,6 @@ class Card extends LitElement {
                             @slotchange=${this._slotsChanged}
                         ></slot>
                     </div>
-                </div>
-                <div class="card-content">
-                    <slot></slot>
                 </div>
                 <div class="card-footer">
                     <slot name="footer"></slot>
