@@ -1,4 +1,5 @@
-import { LitElement, html, unsafeCSS } from "lit";
+import { LitElement, unsafeCSS } from "lit";
+import { html, literal } from "lit/static-html.js";
 import styles from "./ilw-card.styles.css?inline";
 import "./ilw-card.css";
 import { classMap } from "lit/directives/class-map.js";
@@ -11,8 +12,9 @@ class Card extends LitElement {
             clickable: { type: Boolean },
             align: {},
             aspectRatio: {},
+            tag: {},
             _hasGraphic: { state: true, type: Boolean },
-            _iconOnly: { state: true, type: Boolean },
+            _iconOnly: { state: true, type: Boolean }
         };
     }
 
@@ -20,8 +22,12 @@ class Card extends LitElement {
         return unsafeCSS(styles);
     }
 
+    articleTag = literal`article`;
+    divTag = literal`div`;
+
     constructor() {
         super();
+        this.tag = "article";
         this.align = "left";
         this.theme = "white";
         this.aspectRatio = "";
@@ -39,7 +45,7 @@ class Card extends LitElement {
                 const link = this.querySelector("a");
                 link.click();
             }
-        }
+        };
     }
 
     /**
@@ -74,11 +80,13 @@ class Card extends LitElement {
         const styles = {
             "--ilw-card--aspect-ratio": this.aspectRatio
                 ? this.aspectRatio
-                : null,
+                : null
         };
+
+        let staticTag = this.tag === "div" ? this.divTag : this.articleTag;
         return html`
-            <article class=${classMap(classes)} style=${styleMap(styles)}
-                     @click="${this.clickable ? this._click : null}">
+            <${staticTag} class=${classMap(classes)} style=${styleMap(styles)}
+                         @click="${this.clickable ? this._click : null}">
                 <div class="card-content">
                     <slot></slot>
                 </div>
@@ -99,7 +107,7 @@ class Card extends LitElement {
                 <div class="card-footer">
                     <slot name="footer"></slot>
                 </div>
-            </article>
+            </${staticTag}>
         `;
     }
 }

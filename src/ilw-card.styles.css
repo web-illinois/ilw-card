@@ -246,7 +246,7 @@
     text-align: center;
 }
 
-article {
+.card {
     position: relative;
     flex: 1;
     display: flex;
