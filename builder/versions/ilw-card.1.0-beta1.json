@@ -6,10 +6,10 @@
     "element-name": "ilw-card",
     "description": "A card component that can be used as a container for grouping information.",
     "builder-version": "1.0-beta1",
-    "version": "1.0.0-beta1",
+    "version": "1.0.1-beta",
     "date": "08/02/2024",
-    "css": "https://dev.toolkit.illinois.edu/ilw-card/1.0.0-beta1/ilw-card.css",
-    "js": "https://dev.toolkit.illinois.edu/ilw-card/1.0.0-beta1/ilw-card.js",
+    "css": "https://dev.toolkit.illinois.edu/ilw-card/1.0.1-beta/ilw-card.css",
+    "js": "https://dev.toolkit.illinois.edu/ilw-card/1.0.1-beta/ilw-card.js",
     "production": false,
     "notes": "",
     "parent-style": "margin: 0 auto; max-width: 400px; padding: 15px;",
@@ -83,6 +83,15 @@
                 "1/3",
                 "10/16"
             ]
+        },
+        {
+            "name": "tag",
+            "description": "Use a div tag instead of article",
+            "depreciated": false,
+            "values": [
+                "",
+                "div"
+            ]
         }
     ],
     "classes-fixed": [],
@@ -91,12 +100,12 @@
         {
             "name": "--ilw-card--margin-top",
             "depreciated": false,
-            "description": "Margin above cards [default: 1rem]"
+            "description": "Margin above cards [default: 0]"
         },
         {
             "name": "--ilw-card--margin-bottom",
             "depreciated": false,
-            "description": "Margin below cards [default: 1rem]"
+            "description": "Margin below cards [default: 0]"
         },
         {
             "name": "--ilw-card--content-padding-top",
