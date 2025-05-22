@@ -35,6 +35,7 @@ ilw-card {
         & > h6 {
             a {
                 color: var(--ilw-card--clickable--heading-color);
+                font-size: var(--ilw-card--clickable--heading-size);
                 text-decoration: none;
                 display: inline-block;
                 padding-right: 1.5em;

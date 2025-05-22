@@ -38,7 +38,9 @@
         --ilw-card--link-visited: var(--ilw-link--visited-color); /*var: Visited link color for inside the card*/
 
         --ilw-card--clickable--heading-color: var(--ilw-card--heading-color); /*var: Color of a clickable card heading*/
+        --ilw-card--clickable--heading-size: 1.34rem; /*var: Font size for a clickable card heading*/
         --ilw-card--clickable--border: var(--il-orange);
+        --ilw-card--clickable--content-padding-top: 1.75rem;
 
         /* Colors for a clickable card when hovered */
         --ilw-card--hover--background: var(--il-blue); /*var: Background for the hover state of a clickable card*/
@@ -83,14 +85,14 @@
     :host([theme="blue"]) {
         --ilw-card--border-color: var(--il-storm);
         --ilw-card--background: var(--il-blue);
-        --ilw-card--heading-color: var(--il-orange);
+        --ilw-card--heading-color: #fff;
         --ilw-card--icon-color: #fff;
         --ilw-card--text-color: #fff;
         --ilw-card--link: #fff;
         --ilw-card--link-focus: var(--il-orange);
         --ilw-card--link-visited: #fff;
 
-        --ilw-card--clickable--heading-color: var(--il-orange);
+        --ilw-card--clickable--heading-color: #fff;
         --ilw-card--clickable--border: var(--il-orange);
 
         --ilw-card--hover--background: #fff;
@@ -301,6 +303,14 @@
     padding: var(--ilw-card--content-padding-top) var(--ilw-card--content-padding-right) 0 var(--ilw-card--content-padding-left);
     flex: 1;
     order: 1;
+
+    ::slotted(:first-child) {
+        margin-top: 0;
+    }
+}
+
+:host([clickable]) .card-content {
+    padding-top: var(--ilw-card--clickable--content-padding-top);
 }
 
 .icon-only .card-content {
@@ -310,4 +320,8 @@
 .card-footer {
     padding: 0 var(--ilw-card--content-padding-right) var(--ilw-card--content-padding-bottom) var(--ilw-card--content-padding-left);
     order: 2;
+
+    &.empty {
+        display: none;
+    }
 }

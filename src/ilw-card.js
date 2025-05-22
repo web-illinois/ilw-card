@@ -14,7 +14,8 @@ class Card extends LitElement {
             aspectRatio: {},
             tag: {},
             _hasGraphic: { state: true, type: Boolean },
-            _iconOnly: { state: true, type: Boolean }
+            _iconOnly: { state: true, type: Boolean },
+            _hasFooter: { state: true, type: Boolean },
         };
     }
 
@@ -55,6 +56,9 @@ class Card extends LitElement {
      * @private
      */
     _slotsChanged() {
+        const footers = this.shadowRoot.querySelector("slot[name=footer]");
+        this._hasFooter = footers.assignedElements().length > 0;
+
         const images = this.shadowRoot.querySelector("slot[name=image]");
         if (images.assignedElements().length > 0) {
             this._hasGraphic = true;
@@ -104,7 +108,7 @@ class Card extends LitElement {
                         ></slot>
                     </div>
                 </div>
-                <div class="card-footer">
+                <div class="card-footer ${this._hasFooter ? "" : "empty"}" @slotchange=${this._slotsChanged}>
                     <slot name="footer"></slot>
                 </div>
             </${staticTag}>
