@@ -79,7 +79,8 @@ class Card extends LitElement {
             // Only add the force-ratio class if we are in fact forcing an aspect ratio
             "force-ratio": !!this.aspectRatio,
             graphic: this._hasGraphic,
-            "icon-only": this._iconOnly
+            "icon-only": this._iconOnly,
+            "has-footer": this._hasFooter,
         };
         const styles = {
             "--ilw-card--aspect-ratio": this.aspectRatio
