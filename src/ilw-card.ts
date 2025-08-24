@@ -1,71 +1,76 @@
 import { LitElement, unsafeCSS } from "lit";
 import { html, literal } from "lit/static-html.js";
+// @ts-ignore
 import styles from "./ilw-card.styles.css?inline";
 import "./ilw-card.css";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-class Card extends LitElement {
-    static get properties() {
-        return {
-            theme: {},
-            clickable: { type: Boolean },
-            align: {},
-            aspectRatio: {},
-            tag: {},
-            _hasGraphic: { state: true, type: Boolean },
-            _iconOnly: { state: true, type: Boolean },
-            _hasFooter: { state: true, type: Boolean },
-        };
-    }
+import { customElement, property, state } from "lit/decorators.js";
 
+@customElement("ilw-card")
+export default class Card extends LitElement {
     static get styles() {
         return unsafeCSS(styles);
     }
+
+    @property()
+    theme: string = "white";
+    @property()
+    clickable: boolean = false;
+    @property()
+    align: string = "left";
+    @property()
+    aspectRatio: string = "";
+    @property()
+    tag: string = "article";
+    @state()
+    _hasGraphic: boolean = false;
+    @state()
+    _iconOnly: boolean = false;
+    @state()
+    _hasFooter: boolean = false;
 
     articleTag = literal`article`;
     divTag = literal`div`;
 
     constructor() {
         super();
-        this.tag = "article";
-        this.align = "left";
-        this.theme = "white";
-        this.aspectRatio = "";
-        this.clickable = false;
-        this._hasGraphic = false;
-        this._iconOnly = false;
-
-        this._click = (ev) => {
-            /**
-             * @type {HTMLElement}
-             */
-            const target = ev.target;
-            // Don't click the card if there's an element inside that's already clickable
-            if (target.tagName !== "A" || target.tagName !== "BUTTON") {
-                const link = this.querySelector("a");
-                link.click();
-            }
-        };
     }
+
+    protected _click = (ev: MouseEvent) => {
+        const target = ev.target as HTMLElement;
+        // Don't click the card if there's an element inside that's already clickable
+        if (target.tagName !== "A" && target.tagName !== "BUTTON") {
+            const link = this.querySelector("a");
+            link?.click();
+        }
+    };
 
     /**
      * Tracks the number of graphic elements (images and icons) in the card, so we can
      * hide the graphics container if there's no graphics.
-     *
-     * @private
      */
-    _slotsChanged() {
-        const footers = this.shadowRoot.querySelector("slot[name=footer]");
-        this._hasFooter = footers.assignedElements().length > 0;
+    protected _slotsChanged() {
+        const shadowRoot = this.shadowRoot;
+        if (!shadowRoot) return;
 
-        const images = this.shadowRoot.querySelector("slot[name=image]");
-        if (images.assignedElements().length > 0) {
+        const footers = shadowRoot.querySelector(
+            "slot[name=footer]",
+        ) as HTMLSlotElement;
+        this._hasFooter = footers?.assignedElements().length > 0;
+
+        const images = shadowRoot.querySelector(
+            "slot[name=image]",
+        ) as HTMLSlotElement;
+        if (images?.assignedElements().length > 0) {
             this._hasGraphic = true;
             return;
         }
-        const icons = this.shadowRoot.querySelector("slot[name=icon]");
-        if (icons.assignedElements().length > 0) {
+        const icons = shadowRoot.querySelector(
+            "slot[name=icon]",
+        ) as HTMLSlotElement;
+        if (icons?.assignedElements().length > 0) {
             this._iconOnly = true;
             this._hasGraphic = true;
             return;
@@ -85,7 +90,7 @@ class Card extends LitElement {
         const styles = {
             "--ilw-card--aspect-ratio": this.aspectRatio
                 ? this.aspectRatio
-                : null
+                : null,
         };
 
         let staticTag = this.tag === "div" ? this.divTag : this.articleTag;
@@ -117,4 +122,8 @@ class Card extends LitElement {
     }
 }
 
-customElements.define("ilw-card", Card);
+declare global {
+    interface HTMLElementTagNameMap {
+        "ilw-card": Card;
+    }
+}
