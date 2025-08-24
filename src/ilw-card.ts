@@ -15,15 +15,15 @@ export default class Card extends LitElement {
     }
 
     @property()
-    theme: string = "white";
+    theme: "white" | "gray" | "orange" | "blue" | "orange-gradient" | "blue-gradient" = "white";
     @property()
     clickable: boolean = false;
     @property()
-    align: string = "left";
+    align: "left" | "center" = "left";
     @property()
     aspectRatio: string = "";
     @property()
-    tag: string = "article";
+    tag: "article" | "div" = "article";
     @state()
     _hasGraphic: boolean = false;
     @state()
