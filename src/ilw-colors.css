@@ -22,20 +22,35 @@
 }
 
 :root {
-    --ilw-color--background: #ffffff;
-    --ilw-color--text: var(--il-storm-10);
-    --ilw-color--border: var(--il-storm);
-    --ilw-color--border-light: var(--il-storm-80);
-    --ilw-color--link: var(--il-industrial);
-    --ilw-color--link-hover: var(--il-altgeld);
-    --ilw-color--heading: var(--il-blue);
-    --ilw-color--heading-link: var(--il-blue);
-    --ilw-color--heading-link-hover: var(--il-altgeld);
-    --ilw-color--control: #ffffff;
-    --ilw-color--control-text: var(--il-blue);
-    --ilw-color--control-accent: var(--il-orange);
-    --ilw-color--control-accent2: var(--il-orange);
-    --ilw-color--control-accent-text: #ffffff;
+    --ilw-color--white--background: #ffffff;
+    --ilw-color--white--text: var(--il-storm-10);
+    --ilw-color--white--border: var(--il-storm);
+    --ilw-color--white--border-light: var(--il-storm-80);
+    --ilw-color--white--link: var(--il-industrial);
+    --ilw-color--white--link-hover: var(--il-altgeld);
+    --ilw-color--white--heading: var(--il-blue);
+    --ilw-color--white--heading-link: var(--il-blue);
+    --ilw-color--white--heading-link-hover: var(--il-altgeld);
+    --ilw-color--white--control: #ffffff;
+    --ilw-color--white--control-text: var(--il-blue);
+    --ilw-color--white--control-accent: var(--il-orange);
+    --ilw-color--white--control-accent2: var(--il-orange);
+    --ilw-color--white--control-accent-text: #ffffff;
+
+    --ilw-color--background: var(--ilw-color--white--background);
+    --ilw-color--text: var(--ilw-color--white--text);
+    --ilw-color--border: var(--ilw-color--white--border);
+    --ilw-color--border-light: var(--ilw-color--white--border-light);
+    --ilw-color--link: var(--ilw-color--white--link);
+    --ilw-color--link-hover: var(--ilw-color--white--link-hover);
+    --ilw-color--heading: var(--ilw-color--white--heading);
+    --ilw-color--heading-link: var(--ilw-color--white--heading-link);
+    --ilw-color--heading-link-hover: var(--ilw-color--white--heading-link-hover);
+    --ilw-color--control: var(--ilw-color--white--control);
+    --ilw-color--control-text: var(--ilw-color--white--control-text);
+    --ilw-color--control-accent: var(--ilw-color--white--control-accent);
+    --ilw-color--control-accent2: var(--ilw-color--white--control-accent2);
+    --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
 
     --ilw-color--focus--background: var(--il-arches-90);
     --ilw-color--focus--text: var(--il-blue);
@@ -112,19 +127,20 @@
     --ilw-color--orangegrad--control-accent-text: #ffffff;
 }
 [theme="white"] {
-    --ilw-color--background: #ffffff;
-    --ilw-color--text: var(--il-storm-10);
-    --ilw-color--border: var(--il-storm);
-    --ilw-color--border-light: var(--il-storm-80);
-    --ilw-color--link: var(--il-industrial);
-    --ilw-color--link-hover: var(--il-altgeld);
-    --ilw-color--heading: var(--il-blue);
-    --ilw-color--heading-link: var(--il-blue);
-    --ilw-color--heading-link-hover: var(--il-altgeld);
-    --ilw-color--control: #ffffff;
-    --ilw-color--control-text: var(--il-blue);
-    --ilw-color--control-accent: var(--il-orange);
-    --ilw-color--control-accent-text: #ffffff;
+    --ilw-color--background: var(--ilw-color--white--background);
+    --ilw-color--text: var(--ilw-color--white--text);
+    --ilw-color--border: var(--ilw-color--white--border);
+    --ilw-color--border-light: var(--ilw-color--white--border-light);
+    --ilw-color--link: var(--ilw-color--white--link);
+    --ilw-color--link-hover: var(--ilw-color--white--link-hover);
+    --ilw-color--heading: var(--ilw-color--white--heading);
+    --ilw-color--heading-link: var(--ilw-color--white--heading-link);
+    --ilw-color--heading-link-hover: var(--ilw-color--white--heading-link-hover);
+    --ilw-color--control: var(--ilw-color--white--control);
+    --ilw-color--control-text: var(--ilw-color--white--control-text);
+    --ilw-color--control-accent: var(--ilw-color--white--control-accent);
+    --ilw-color--control-accent2: var(--ilw-color--white--control-accent2);
+    --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
 }
 [theme="blue"] {
     --ilw-color--background: var(--ilw-color--blue--background);
