@@ -78,6 +78,8 @@
                 document.getElementById("grid"),
                 Card,
                 {
+                    clickable: [true, undefined],
+                    align: ["left", "center"],
                     theme: [
                         "white",
                         "gray",
@@ -86,10 +88,9 @@
                         "orange-gradient",
                         "blue-gradient",
                     ],
-                    clickable: [true, undefined],
-                    align: ["left", "center"],
                     aspectRatio: [undefined, "16/9", "4/3", "1/1"],
                     tag: ["article", "div"],
+                    "data-hover": [undefined, "true"],
                 },
                 ["plain-card", "image-card", "footer-card", "icon-card"],
             );

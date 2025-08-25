@@ -78,8 +78,13 @@ export default class Card extends LitElement {
         this._hasGraphic = false;
     }
 
+    connectedCallback() {
+        super.connectedCallback();
+        this.classList.add("ilw-colors");
+    }
+
     render() {
-        const classes = {
+        const classes: Record<string, boolean> = {
             card: true,
             // Only add the force-ratio class if we are in fact forcing an aspect ratio
             "force-ratio": !!this.aspectRatio,
@@ -87,6 +92,7 @@ export default class Card extends LitElement {
             "icon-only": this._iconOnly,
             "has-footer": this._hasFooter,
         };
+        classes[`theme-${this.theme}`] = true;
         const styles = {
             "--ilw-card--aspect-ratio": this.aspectRatio
                 ? this.aspectRatio

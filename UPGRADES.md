@@ -54,6 +54,13 @@ Rename all .js files to .ts
 
 Run fastmod.sh(see WIGG Web Component Developers team).
 
+Fix remaining issues:
+
+- Remove the closing of the static get properties() function.
+- Move the default values from the constructor to the properties. 
+- Declare any state properties that hadn't bee declared yet.
+- Add missing types.
+
 ## axe-core tests
 
 1. Copy the test-axe folder, as well asplaywright.config.ts and playwright.ci.config.ts from ilw-filter to the project root.
@@ -101,5 +108,5 @@ Run fastmod.sh(see WIGG Web Component Developers team).
 
 ## GitHub Actions with tests
 
-Copy deploy.yml and test.yml from ilw-filter to .github/workflows
-Remove publish_npm.yml
+1. Copy deploy.yml and test.yml from ilw-filter to .github/workflows
+2. Remove publish_npm.yml
