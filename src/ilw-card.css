@@ -105,17 +105,15 @@ ilw-card {
             }
 
             &[theme="blue"], &[theme="blue-gradient"], &[theme="orange"], &[theme="orange-gradient"] {
-                --ilw-color--background: #ffffff;
-                --ilw-color--text: var(--il-storm-10);
-                --ilw-color--link: var(--il-industrial);
-                --ilw-color--link-hover: var(--il-altgeld);
-                --ilw-color--heading: var(--il-blue);
-                --ilw-color--heading-link: var(--il-blue);
-                --ilw-color--heading-link-hover: var(--il-altgeld);
-                --ilw-color--control: var(--il-storm-10);
-                --ilw-color--control-text: #ffffff;
-                --ilw-color--control-accent: var(--il-altgeld);
-                --ilw-color--control-accent-text: var(--il-orange);
+                --ilw-color--background: var(--ilw-color--white--background);
+                --ilw-color--text: var(--ilw-color--white--text);
+                --ilw-color--link: var(--ilw-color--white--link);
+                --ilw-color--link-hover: var(--ilw-color--white--link-hover);
+                --ilw-color--heading: var(--ilw-color--white--heading);
+                --ilw-color--control: var(--ilw-color--white--control);
+                --ilw-color--control-text: var(--ilw-color--white--control-text);
+                --ilw-color--control-accent: var(--ilw-color--white--control-accent);
+                --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
             }
         }
     }
