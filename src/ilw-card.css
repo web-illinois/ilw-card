@@ -3,13 +3,16 @@
 ilw-card {
     a:not(.ilw-button):not(.ilw-buttons a) {
         color: var(--ilw-color--link);
-        &:hover {
+        &:is(:hover, [data-simulated-hover]) {
             color: var(--ilw-color--link-hover);
         }
         &:focus-visible {
             color: var(--ilw-color--focus--text);
             background-color: var(--ilw-color--focus--background);
             outline: var(--ilw-color--focus--outline);
+        }
+        &:hover {
+            color: var(--ilw-color--link-hover);
         }
     }
 
@@ -65,13 +68,14 @@ ilw-card {
             }
         }
 
-        &:hover {
+        &:is(:hover, [data-simulated-hover]) {
             border-bottom-color: var(--ilw-color--link);
             background: var(--ilw-color--control-text);
+            color: var(--ilw-color--control);
 
             a:not(.ilw-button):not(.ilw-buttons a) {
                 color: var(--ilw-color--control);
-                &:hover {
+                &:is(:hover, [data-simulated-hover]) {
                     color: var(--ilw-color--control-accent);
                 }
                 &:focus {
@@ -89,7 +93,7 @@ ilw-card {
                 color: var(--ilw-color--control-accent-text);
                 a {
                     color: var(--ilw-color--control-accent-text);
-                    &:hover {
+                    &:is(:hover, [data-simulated-hover]) {
                         color: var(--ilw-color--control-accent-text);
                     }
                     &:focus {

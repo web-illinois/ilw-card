@@ -52,24 +52,25 @@ Modify package.json:
 
 Rename all .js files to .ts
 
-Run fastmod.sh(see WIGG Web Component Developers team).
+Run `fastmod.sh` (see WIGG Web Component Developers team).
 
 Fix remaining issues:
 
-- Remove the closing of the static get properties() function.
+- Remove the closing of the static get properties() function, which doesn't get removed by fastmod.
 - Move the default values from the constructor to the properties. 
-- Declare any state properties that hadn't bee declared yet.
+- Declare any state properties that hadn't been declared yet.
 - Add missing types.
 
 ## axe-core tests
 
-1. Copy the test-axe folder, as well asplaywright.config.ts and playwright.ci.config.ts from ilw-filter to the project root.
-2. Create a samples/variations.htmlwith a few sample components with unique IDs, but none of the configurable attributes.
-3. Use createVariations at the bottom of the HTML file. See below for a sample.
-4. Add the necessary dependencies:"@axe-core/playwright": "^4.10.2",
-   1. "@playwright/test": "^1.54.1",
-   2. "axe-html-reporter": "^2.2.11",
-   3. "playwright": "^1.54.1",
+1. Copy the `test-axe` folder, as well as `playwright.config.ts` and `playwright.ci.config.ts` from ilw-filter to the project root.
+2. Create a `samples/variations.html` with a few sample components with unique IDs, but none of the configurable attributes.
+3. Use `createVariations` at the bottom of the HTML file. See below for a sample.
+4. Add the necessary dependencies:
+   1. "@axe-core/playwright": "^4.10.2",
+   2. "@playwright/test": "^1.54.1",
+   3. "axe-html-reporter": "^2.2.11",
+   4. "playwright": "^1.54.1",
 5. Add the test scripts:
    1. "test:axe": "playwright test",
    2. "test:axe:github": "playwright test --config playwright.ci.config.ts",
@@ -104,9 +105,9 @@ Fix remaining issues:
 3. Add the test scripts to package.json:
    1. `"test": "vitest run --browser.headless",`
    2. `"test: browser": "vitest browser --browser chromium"`
-4. Create a test folder and add tests to it. You can refer to ilw-filter tests/ilw-filter.test.ts for a basic example.
+4. Create a test folder and add tests to it. You can refer to ilw-filter `tests/ilw-filter.test.ts` for a basic example.
 
 ## GitHub Actions with tests
 
-1. Copy deploy.yml and test.yml from ilw-filter to .github/workflows
-2. Remove publish_npm.yml
+1. Copy `deploy.yml` and `test.yml` from ilw-filter to `.github/workflows`
+2. Remove `publish_npm.yml`
