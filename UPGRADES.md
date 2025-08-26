@@ -129,6 +129,24 @@ Fix remaining issues:
   if a component has a part that's inverted, you can use `ilw-colors--text` for the background and
   `ilw-colors--background` for the text, since they are guaranteed to have enough contrast between them.
 
+Here are a few examples from ilw-card:
+
+```diff
+-    border-bottom: 4px solid var(--ilw-card--clickable--border);
++    border-bottom: 4px solid var(--ilw-color--control-accent);
+
+-    color: var(--ilw-card--heading-color);
++    color: var(--ilw-color--heading);
+
+
+-    border: 1px solid var(--ilw-card--border-color);
+-    background: var(--ilw-card--background);
+-    color: var(--ilw-card--text-color);
++    border: 1px solid var(--ilw-color--border);
++    background: var(--ilw-color--background);
++    color: var(--ilw-color--text);
+```
+
 ### Using themes within themes
 
 Sometimes you may need to use a theme inside a different theme. For example, cards have hover states where
