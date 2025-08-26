@@ -123,7 +123,7 @@ Fix remaining issues:
 
 ### Semantic color names
 
-- Refer to (Illinois Web Components Toolkit Colors)[https://marvel-uiuc.github.io/wigg-colors]
+- Refer to [Illinois Web Components Toolkit Colors](https://marvel-uiuc.github.io/wigg-colors)
   to check the semantic color names and how they behave in different themes.
 - You can use semantic colors for purposes other than the specific name it has. For example,
   if a component has a part that's inverted, you can use `ilw-colors--text` for the background and
