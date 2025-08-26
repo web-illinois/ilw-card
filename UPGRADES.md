@@ -111,3 +111,59 @@ Fix remaining issues:
 
 1. Copy `deploy.yml` and `test.yml` from ilw-filter to `.github/workflows`
 2. Remove `publish_npm.yml`
+
+## Semantic Colors
+
+1. Remove all[^1] references to `il-*` colors like `il-blue`, `il-orange`, etc. Replace them with
+   semantic colors like `ilw-colors--background`, `ilw-colors--text` and so on. See below for details.
+2. Remove all[^1] theme-specific CSS, such as `[theme="blue"]`. That will be handled automatically by the
+   semantic colors.
+
+[^1]: There are cases where the semantic colors don't fit with design requirements. In those cases, you can keep the `il-*` colors and theme-specific CSS, but try to minimize their use. See [Overriding specific colors](#overriding-specific-colors) below for an example.
+
+### Semantic color names
+
+- Refer to (Illinois Web Components Toolkit Colors)[https://marvel-uiuc.github.io/wigg-colors]
+  to check the semantic color names and how they behave in different themes.
+- You can use semantic colors for purposes other than the specific name it has. For example,
+  if a component has a part that's inverted, you can use `ilw-colors--text` for the background and
+  `ilw-colors--background` for the text, since they are guaranteed to have enough contrast between them.
+
+### Using themes within themes
+
+Sometimes you may need to use a theme inside a different theme. For example, cards have hover states where
+the hover is essentially the same as a different theme. Here's how that's handled in ilw-card:
+
+```css
+ilw-card[clickable]:hover {
+    &[theme="blue"], &[theme="blue-gradient"], &[theme="orange"], &[theme="orange-gradient"] {
+        --ilw-color--background: var(--ilw-color--white--background);
+        --ilw-color--text: var(--ilw-color--white--text);
+        --ilw-color--link: var(--ilw-color--white--link);
+        --ilw-color--link-hover: var(--ilw-color--white--link-hover);
+        --ilw-color--heading: var(--ilw-color--white--heading);
+        --ilw-color--control: var(--ilw-color--white--control);
+        --ilw-color--control-text: var(--ilw-color--white--control-text);
+        --ilw-color--control-accent: var(--ilw-color--white--control-accent);
+        --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
+    }
+}
+```
+
+In other words, when a blue or orange card is hovered, it uses the white theme colors.
+
+### Overriding specific colors
+
+When a design uses a color that doesn't fit with the semantic colors, you can override it. For example,
+with ilw-card the white theme has an orange heading even though the normal heading color is blue. Because
+it's the default theme it's not enough to set the color on `[theme="white"]`. Instead, ilw-card adds a class
+to the component for the theme, which by default is white, and then the following CSS:
+
+```css
+.theme-white {
+    --ilw-color--heading: var(--il-orange);
+}
+```
+
+This overrides the heading color for the white theme. Note that you can't just override the `--ilw-color--white--heading`
+on the card because the `--ilw-color--heading` is calculated in the root with the original value of `--ilw-color--white--heading`.
