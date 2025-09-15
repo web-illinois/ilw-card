@@ -1,29 +1,18 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+import baseConfig from './playwright.base.config';
 
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
-export default defineConfig({
-    testDir: './test-axe',
-    testMatch: /.*\.test|spec\.([tj])s$/,
-    reporter: 'html',
+export default defineConfig(baseConfig, {
     projects: [
         {
-            name: 'chromium',
+            name: "Firefox",
             use: {
-                ...devices['Desktop Chrome'],
-                // GitHub Actions have chrome pre-installed, so we use that channel
-                channel: 'chrome',
+                ...devices["Desktop Firefox"],
+                channel: "firefox",
             },
         },
     ],
-    webServer: {
-        command: 'npm run dev',
-        url: 'http://localhost:5173/samples/index.html',
-        reuseExistingServer: !process.env.CI,
-    },
-    use: {
-        baseURL: 'http://localhost:5173',
-    },
 });
