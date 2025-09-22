@@ -1,22 +1,27 @@
+@import "./ilw-colors.css";
+
 ilw-card {
-    a {
-        color: var(--ilw-card--link);
-        &:focus {
-            color: var(--ilw-link--focus-color);
-            background-color: var(--ilw-link--focus-background-color);
-            outline: var(--ilw-link--focus-outline);
+    a:not(.ilw-button):not(.ilw-buttons a) {
+        color: var(--ilw-color--link);
+        &:is(:hover, [data-simulated-hover]) {
+            color: var(--ilw-color--link-hover);
+        }
+        &:focus-visible {
+            color: var(--ilw-color--focus--text);
+            background-color: var(--ilw-color--focus--background);
+            outline: var(--ilw-color--focus--outline);
         }
         &:hover {
-            color: var(--ilw-card--link-focus);
+            color: var(--ilw-color--link-hover);
         }
     }
 
-    & > h2,
-    & > h3,
-    & > h4,
-    & > h5,
-    & > h6 {
-        color: var(--ilw-card--heading-color);
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--ilw-color--heading);
         font-size: var(--ilw-card--heading--font-size);
 
         &:first-of-type {
@@ -25,16 +30,16 @@ ilw-card {
     }
 
     &[clickable] {
-        border-bottom: 4px solid var(--ilw-card--clickable--border);
+        border-bottom: 4px solid var(--ilw-color--control-accent);
         cursor: pointer;
 
-        & > h2,
-        & > h3,
-        & > h4,
-        & > h5,
-        & > h6 {
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             a {
-                color: var(--ilw-card--clickable--heading-color);
+                color: var(--ilw-color--heading);
                 font-size: var(--ilw-card--clickable--heading-size);
                 text-decoration: none;
                 display: inline-block;
@@ -43,9 +48,9 @@ ilw-card {
                 vertical-align: middle;
 
                 &:focus {
-                    color: var(--ilw-link--focus-color);
-                    background-color: var(--ilw-link--focus-background-color);
-                    outline: var(--ilw-link--focus-outline);
+                    color: var(--ilw-color--focus--text);
+                    background-color: var(--ilw-color--focus--background);
+                    outline: var(--ilw-color--focus--outline);
                 }
 
                 &::after {
@@ -63,40 +68,52 @@ ilw-card {
             }
         }
 
-        &:hover {
-            border-bottom-color: var(--ilw-card--hover--clickable-border);
-            background: var(--ilw-card--hover--background);
-            color: var(--ilw-card--hover--text-color);
+        &:is(:hover, [data-simulated-hover]) {
+            border-bottom-color: var(--ilw-color--link);
+            background: var(--ilw-color--control-text);
+            color: var(--ilw-color--control);
 
-            a {
-                color: var(--ilw-card--hover--link);
-                &:focus {
-                    color: var(--ilw-link--focus-color);
-                    background-color: var(--ilw-link--focus-background-color);
-                    outline: var(--ilw-link--focus-outline);
+            a:not(.ilw-button):not(.ilw-buttons a) {
+                color: var(--ilw-color--control);
+                &:is(:hover, [data-simulated-hover]) {
+                    color: var(--ilw-color--control-accent);
                 }
-                &:hover {
-                    color: var(--ilw-card--hover--link-focus);
+                &:focus {
+                    color: var(--ilw-color--focus--text);
+                    background-color: var(--ilw-color--focus--background);
+                    outline: var(--ilw-color--focus--outline);
                 }
             }
 
-            & > h2,
-            & > h3,
-            & > h4,
-            & > h5,
-            & > h6 {
-                color: var(--ilw-card--hover--heading-color);
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: var(--ilw-color--control-accent-text);
                 a {
-                    color: var(--ilw-card--hover--heading-color);
-                    &:hover {
-                        color: var(--ilw-card--hover--heading-color);
+                    color: var(--ilw-color--control-accent-text);
+                    &:is(:hover, [data-simulated-hover]) {
+                        color: var(--ilw-color--control-accent-text);
                     }
                     &:focus {
-                        color: var(--ilw-link--focus-color);
-                        background-color: var(--ilw-link--focus-background-color);
-                        outline: var(--ilw-link--focus-outline);
+                        color: var(--ilw-color--focus--text);
+                        background-color: var(--ilw-color--focus--background);
+                        outline: var(--ilw-color--focus--outline);
                     }
                 }
+            }
+
+            &[theme="blue"], &[theme="blue-gradient"], &[theme="orange"], &[theme="orange-gradient"] {
+                --ilw-color--background: var(--ilw-color--white--background);
+                --ilw-color--text: var(--ilw-color--white--text);
+                --ilw-color--link: var(--ilw-color--white--link);
+                --ilw-color--link-hover: var(--ilw-color--white--link-hover);
+                --ilw-color--heading: var(--ilw-color--white--heading);
+                --ilw-color--control: var(--ilw-color--white--control);
+                --ilw-color--control-text: var(--ilw-color--white--control-text);
+                --ilw-color--control-accent: var(--ilw-color--white--control-accent);
+                --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
             }
         }
     }
@@ -104,25 +121,6 @@ ilw-card {
     > [slot=image] {
         img {
             display: block;
-        }
-    }
-}
-
-ilw-card[clickable] {
-    a.ilw-button,
-    button.ilw-button,
-    ul.ilw-buttons a,
-    ul.ilw-buttons button {
-        transition-duration: 0s;
-
-        /* Fix button text colors in clickable cards */
-        color: var(--ilw-button--foreground-color);
-        &:hover {
-            color: var(--ilw-button--focused-foreground-color);
-        }
-        &:focus {
-            color: var(--ilw-link--focus-color);
-            outline: var(--ilw-link--focus-outline);
         }
     }
 }
