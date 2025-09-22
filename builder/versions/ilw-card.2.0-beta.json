@@ -10,7 +10,7 @@
     "date": "08/25/2025",
     "css": "https://dev.toolkit.illinois.edu/ilw-card/2.0.0-beta/ilw-card.css",
     "js": "https://dev.toolkit.illinois.edu/ilw-card/2.0.0-beta/ilw-card.js",
-    "production": true,
+    "production": false,
     "notes": "",
     "parent-style": "margin: 0 auto; max-width: 400px; padding: 15px;",
     "samples": [
