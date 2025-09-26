@@ -67,6 +67,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: var(--ilw-card--icon-height);
+    line-height: 1;
 
     ::slotted(*) {
         max-height: var(--ilw-card--icon-height);
