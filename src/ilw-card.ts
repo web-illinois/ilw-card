@@ -80,7 +80,6 @@ export default class Card extends LitElement {
 
     connectedCallback() {
         super.connectedCallback();
-        this.classList.add("ilw-colors");
     }
 
     render() {

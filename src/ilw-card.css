@@ -1,5 +1,3 @@
-@import "./ilw-colors.css";
-
 ilw-card {
     a:not(.ilw-button):not(.ilw-buttons a) {
         color: var(--ilw-color--link);
