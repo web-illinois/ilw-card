@@ -4,13 +4,13 @@ ilw-card {
         &:is(:hover, [data-simulated-hover]) {
             color: var(--ilw-color--link-hover);
         }
+        &:hover {
+            color: var(--ilw-color--link-hover);
+        }
         &:focus-visible {
             color: var(--ilw-color--focus--text);
             background-color: var(--ilw-color--focus--background);
             outline: var(--ilw-color--focus--outline);
-        }
-        &:hover {
-            color: var(--ilw-color--link-hover);
         }
     }
 
@@ -36,7 +36,7 @@ ilw-card {
         h4,
         h5,
         h6 {
-            a {
+            a[href] {
                 color: var(--ilw-color--heading);
                 font-size: var(--ilw-card--clickable--heading-size);
                 text-decoration: none;
@@ -44,7 +44,6 @@ ilw-card {
                 padding-right: 1.5em;
                 position: relative;
                 vertical-align: middle;
-
                 &:focus {
                     color: var(--ilw-color--focus--text);
                     background-color: var(--ilw-color--focus--background);
@@ -67,14 +66,22 @@ ilw-card {
         }
 
         &:is(:hover, [data-simulated-hover]) {
+
+            --ilw-color--background: var(--ilw-color--blue--background);
+            --ilw-color--text: var(--ilw-color--blue--text);
+            --ilw-color--link: var(--ilw-color--blue--link);
+            --ilw-color--link-hover: var(--ilw-color--blue--link-hover);
+            --ilw-color--heading: var(--ilw-color--blue--heading);
+            --ilw-color--control: var(--ilw-color--blue--control);
+            --ilw-color--control-text: var(--ilw-color--blue--control-text);
+            --ilw-color--control-accent: var(--ilw-color--blue--control-accent);
+            --ilw-color--control-accent-text: var(--ilw-color--blue--control-accent-text);
             border-bottom-color: var(--ilw-color--link);
-            background: var(--ilw-color--control-text);
-            color: var(--ilw-color--control);
 
             a:not(.ilw-button):not(.ilw-buttons a) {
-                color: var(--ilw-color--control);
+                color: var(--ilw-color--link);
                 &:is(:hover, [data-simulated-hover]) {
-                    color: var(--ilw-color--control-accent);
+                    color: var(--ilw-color--link-hover);
                 }
                 &:focus {
                     color: var(--ilw-color--focus--text);
@@ -88,11 +95,11 @@ ilw-card {
             h4,
             h5,
             h6 {
-                color: var(--ilw-color--control-accent-text);
-                a {
-                    color: var(--ilw-color--control-accent-text);
+                color: var(--ilw-color--heading);
+                a:not(.ilw-button):not(.ilw-buttons a) {
+                    color: var(--ilw-color--heading);
                     &:is(:hover, [data-simulated-hover]) {
-                        color: var(--ilw-color--control-accent-text);
+                        color: var(--ilw-color--heading);
                     }
                     &:focus {
                         color: var(--ilw-color--focus--text);

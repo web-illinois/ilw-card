@@ -19,6 +19,7 @@
 }
 
 :host {
+    --ilw-color--white--heading: var(--il-orange);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -30,7 +31,6 @@
 }
 
 .theme-white {
-    --ilw-color--heading: var(--il-orange);
 }
 
 :host[align="center"] {
