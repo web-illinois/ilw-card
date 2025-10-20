@@ -15,11 +15,19 @@
 
         --ilw-card--clickable--heading-size: 1.34rem; /*var: Font size for a clickable card heading*/
         --ilw-card--clickable--content-padding-top: 1.75rem;
+
+        /* Deprecated backwards-compatible colors for 3.7.1 */
+        --ilw-card--text-color: var(--ilw-color--text);
+        --ilw-card--hover--text-color: var(--ilw-color--text);
+        --ilw-card--hover--heading-color: var(--ilw-color--heading);
+        --ilw-card--heading-color: var(--ilw-color--heading);
+        --ilw-card--clickable--heading-color: var(--ilw-card--heading-color);
     }
 }
 
 :host {
     --ilw-color--white--heading: var(--il-orange);
+    --ilw-color--heading: var(--ilw-color--white--heading);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
