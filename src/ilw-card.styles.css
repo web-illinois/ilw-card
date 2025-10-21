@@ -18,10 +18,61 @@
 
         /* Temporarily add old color variables for 3.7.1 */
         --ilw-card--text-color: var(--ilw-color--text);
+        --ilw-card--heading-color: var(--ilw-color--heading);
         --ilw-card--hover--text-color: var(--ilw-color--text);
         --ilw-card--hover--heading-color: var(--ilw-color--heading);
-        --ilw-card--heading-color: var(--ilw-color--heading);
         --ilw-card--clickable--heading-color: var(--ilw-card--heading-color);
+    }
+
+    /* Temporarily add old color variables for 3.7.1 */
+    :host([theme="gray"]) {
+        --ilw-card--heading-color: var(--il-blue);
+        --ilw-card--text-color: var(--il-storm-darker-1);
+        --ilw-card--clickable--heading-color: var(--il-altgeld);
+    }
+
+    /* Temporarily add old color variables for 3.7.1 */
+    :host([theme="blue"]) {
+        --ilw-card--heading-color: #fff;
+        --ilw-card--text-color: #fff;
+
+        --ilw-card--clickable--heading-color: #fff;
+
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
+    }
+
+    /* Temporarily add old color variables for 3.7.1 */
+    :host([theme="orange"]) {
+        --ilw-card--heading-color: #fff;
+        --ilw-card--text-color: var(--il-blue);
+
+        --ilw-card--clickable--heading-color: #fff;
+
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
+    }
+
+    /* Temporarily add old color variables for 3.7.1 */
+    :host([theme="blue-gradient"]) {
+        --ilw-card--heading-color: #fff;
+        --ilw-card--text-color: #fff;
+
+        --ilw-card--clickable--heading-color: #fff;
+
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
+    }
+
+    /* Temporarily add old color variables for 3.7.1 */
+    :host([theme="orange-gradient"] ) {
+        --ilw-card--heading-color: var(--il-blue);
+        --ilw-card--text-color: var(--il-blue);
+
+        --ilw-card--clickable--heading-color: var(--il-blue);
+
+        --ilw-card--hover--heading-color: var(--il-orange);
+        --ilw-card--hover--text-color: var(--ilw-text--color);
     }
 }
 
@@ -105,6 +156,7 @@
     ::slotted(:first-child) {
         margin-top: 0;
     }
+
     ::slotted(:last-child) {
         margin-bottom: 0;
     }
