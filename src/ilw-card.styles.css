@@ -78,6 +78,7 @@
 
 :host {
     --ilw-color--white--heading: var(--il-orange);
+    --ilw-color--heading: var(--ilw-color--white--heading);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -89,6 +90,7 @@
 }
 
 .theme-white {
+    --ilw-color--white--heading: var(--il-orange);
 }
 
 :host[align="center"] {
