@@ -22,6 +22,13 @@
         --ilw-card--hover--text-color: var(--ilw-color--text);
         --ilw-card--hover--heading-color: var(--ilw-color--heading);
         --ilw-card--clickable--heading-color: var(--ilw-card--heading-color);
+
+        --ilw-button--background-color: var(--ilw-color--control);
+        --ilw-button--foreground-color: var(--ilw-color--control-text);
+        --ilw-button--border-color: var(--ilw-color--control-text);
+        --ilw-button--focused-background-color: var(--ilw-color--control-text);
+        --ilw-button--focused-foreground-color: var(--ilw-color--control);
+        --ilw-button--focused-border-color: var(--ilw-color--control);
     }
 
     /* Temporarily add old color variables for 3.7.1 */
@@ -88,6 +95,8 @@
     margin-bottom: var(--ilw-card--margin-bottom);
     color: var(--ilw-color--text);
 }
+
+
 
 .theme-white {
     --ilw-color--white--heading: var(--il-orange);
