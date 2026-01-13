@@ -38,7 +38,7 @@ export default class Card extends LitElement {
         super();
     }
 
-    protected _click = (ev: MouseEvent) => {
+    protected  _click (ev: MouseEvent)  {
         const target = ev.target as HTMLElement;
         // Don't click the card if there's an element inside that's already clickable
         if (target.tagName !== "A" && target.tagName !== "BUTTON") {
@@ -101,7 +101,7 @@ export default class Card extends LitElement {
         let staticTag = this.tag === "div" ? this.divTag : this.articleTag;
         return html`
             <${staticTag} class=${classMap(classes)} style=${styleMap(styles)}
-                         @click="${this.clickable ? this._click : null}">
+                         @click=${this._click}>
                 <div class="card-content">
                     <slot></slot>
                 </div>
