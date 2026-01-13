@@ -7,7 +7,7 @@
     "description": "A card component that can be used as a container for grouping information.",
     "builder-version": "1.2",
     "version": "1.2.4",
-    "date": "10/3/2025",
+    "date": "01/13/2026",
     "css": "https://cdn.toolkit.illinois.edu/ilw-card/1.2.4/ilw-card.css",
     "js": "https://cdn.toolkit.illinois.edu/ilw-card/1.2.4/ilw-card.js",
     "production": true,
@@ -25,6 +25,11 @@
     "samples": [
         {
             "name": "default",
+            "description": "Card with an icon",
+            "text": "<ilw-icon slot=\"icon\" icon=\"alumni\"></ilw-icon>\n\n<h3><a href=\"#\">Student Life</a></h3>\n<p>Animal sciences students extend their learning and career networks beyond the classroom through internships.</p>"
+        },
+        {
+            "name": "plain",
             "description": "Plain card with heading and text",
             "text": "<h3>Student Life</h3>\n<p>Animal sciences students extend their learning through internships.</p>"
         },
@@ -37,11 +42,6 @@
             "name": "image",
             "description": "Card with an image and a button",
             "text": "<img src=\"https://picsum.photos/570/300\" alt=\"\" slot=\"image\">\n<h3>Student Life</h3>\n<p>Animal sciences students extend their learning and career networks beyond the classroom through internships, judging teams, student organizations, undergraduate research projects with our faculty, as well as short- and long-term study abroad opportunities all over the world.</p>\n<div slot=\"footer\"><a href=\"#\" class=\"ilw-button\">Learn More <span class=\"ilw-sr-only\">About Student Life</span></a></div>"
-        },
-        {
-            "name": "clickable",
-            "description": "Card with an icon",
-            "text": "<ilw-icon slot=\"icon\" icon=\"alumni\"></ilw-icon>\n\n<h3><a href=\"#\">Student Life</a></h3>\n<p>Animal sciences students extend their learning and career networks beyond the classroom through internships.</p>"
         }
     ],
     "attributes-fixed": [],
