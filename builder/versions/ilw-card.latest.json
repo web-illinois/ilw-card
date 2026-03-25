@@ -6,11 +6,11 @@
     "element-name": "ilw-card",
     "description": "A card component that can be used as a container for grouping information.",
     "builder-version": "latest",
-    "version": "1.2.5",
+    "version": "1.2",
     "date": "08/25/2025",
     "css": "https://dev.toolkit.illinois.edu/ilw-card/latest/ilw-card.css",
     "js": "https://dev.toolkit.illinois.edu/ilw-card/latest/ilw-card.js",
-    "production": true,
+    "production": false,
     "notes": "",
     "parent-style": "margin: 0 auto; max-width: 400px; padding: 15px;",
     "added-components" : [
