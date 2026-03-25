@@ -7,18 +7,30 @@ Links: **[ilw-card in Builder](https://builder3.toolkit.illinois.edu/component/i
 ## Overview
 
 A card component that can be used as a container for grouping information, reminiscent of a physical
-note or playing card. 
+note or playing card.
 
 By default, the card is a white box with a dark border, limited in width, showing the content inside of it. There are
 several variations:
 
 - The top of the card can have an image using `slot="image"`, or an icon using `slot="icon"`.
-- The whole card can be made clickable using the attribute `clickable`.
+- The whole card can be made clickable using the attribute `clickable` (see [Clickable Card](#clickable-card) section for details).
 - Text content can be centered using `align="center"`.
 - Color themes for `gray`, `blue`, `orange`, `blue-gradient` and `orange-gradient`. For example, `theme="blue"`.
 - The aspect ratio of the `image` and `icon` slots can be forced using `aspectRatio="16/9"`.
 
+### Attributes
+
+Attributes are added to the ilw-card component itself.
+
+* theme: the color theme for the component
+* clickable: whether or not the entire card is clickable
+* align: whether the text inside is left-justified or centered
+* aspectRatio: the aspect ratio of the image
+* tag: whether or not the card is tagged 'div' or 'article' for accessibility concerns
+
 ### Slots
+
+Slots are added to the HTML inside the ilw-card component (see examples below). 
 
 | Slot            | Description                                                                                |
 |-----------------|--------------------------------------------------------------------------------------------|
