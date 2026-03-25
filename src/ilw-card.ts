@@ -101,7 +101,7 @@ export default class Card extends LitElement {
         let staticTag = this.tag === "div" ? this.divTag : this.articleTag;
         return html`
             <${staticTag} class=${classMap(classes)} style=${styleMap(styles)}
-                         @click=${this._click}>
+                         @click=${this.clickable ? this._click : null}>
                 <div class="card-content">
                     <slot></slot>
                 </div>
