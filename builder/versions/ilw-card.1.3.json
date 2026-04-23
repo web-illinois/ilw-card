@@ -1,0 +1,165 @@
+{
+    "title": "Card",
+    "tag": "ilw-card",
+    "github": "https://github.com/web-illinois/ilw-card/",
+    "type": "web component",
+    "element-name": "ilw-card",
+    "description": "A card component that can be used as a container for grouping information.",
+    "builder-version": "1.3",
+    "version": "1.3.0",
+    "date": "04/23/2026",
+    "css": "https://cdn.toolkit.illinois.edu/ilw-card/1.3/ilw-card.css",
+    "js": "https://cdn.toolkit.illinois.edu/ilw-card/1.3/ilw-card.js",
+    "production": true,
+    "notes": "",
+    "parent-style": "margin: 0 auto; max-width: 400px; padding: 15px;",
+    "added-components": [
+        {
+            "name": "Icon",
+            "description": "You can use the icon component in the card.",
+            "link": "https://builder3.toolkit.illinois.edu/component/ilw-icon/toolkit/index.html",
+            "css": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.css",
+            "js": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.js"
+        }
+    ],
+    "samples": [
+        {
+            "name": "default",
+            "description": "Card with an icon",
+            "text": "<ilw-icon slot=\"icon\" icon=\"alumni\"></ilw-icon>\n\n<h3><a href=\"#\">Student Life</a></h3>\n<p>Animal sciences students extend their learning and career networks beyond the classroom through internships.</p>"
+        },
+        {
+            "name": "plain",
+            "description": "Plain card with heading and text",
+            "text": "<h3>Student Life</h3>\n<p>Animal sciences students extend their learning through internships.</p>"
+        },
+        {
+            "name": "minimal",
+            "description": "Minimal card without a heading",
+            "text": "<p>Animal sciences students extend their learning through <a href=\"#\">internships</a>.</p>"
+        },
+        {
+            "name": "image",
+            "description": "Card with an image and a button",
+            "text": "<img src=\"https://picsum.photos/570/300\" alt=\"\" slot=\"image\">\n<h3>Student Life</h3>\n<p>Animal sciences students extend their learning and career networks beyond the classroom through internships, judging teams, student organizations, undergraduate research projects with our faculty, as well as short- and long-term study abroad opportunities all over the world.</p>\n<div slot=\"footer\"><a href=\"#\" class=\"ilw-button\">Learn More <span class=\"ilw-sr-only\">About Student Life</span></a></div>"
+        }
+    ],
+    "attributes-fixed": [],
+    "attributes-text": [],
+    "attributes": [
+        {
+            "name": "theme",
+            "description": "Color theme used",
+            "depreciated": false,
+            "values": [
+                "",
+                "gray",
+                "blue",
+                "orange",
+                "blue-gradient",
+                "orange-gradient"
+            ]
+        },
+        {
+            "name": "align",
+            "description": "Align text inside the card",
+            "depreciated": false,
+            "values": [
+                "",
+                "center"
+            ]
+        },
+        {
+            "name": "clickable",
+            "description": "Make the entire card clickable",
+            "depreciated": false,
+            "values": [
+                "",
+                "true"
+            ]
+        },
+        {
+            "name": "aspectRatio",
+            "description": "Force image aspect ratio",
+            "depreciated": false,
+            "values": [
+                "",
+                "1/1",
+                "2/1",
+                "3/1",
+                "16/10",
+                "1/2",
+                "1/3",
+                "10/16"
+            ]
+        },
+        {
+            "name": "tag",
+            "description": "Use a div tag instead of article",
+            "depreciated": false,
+            "values": [
+                "",
+                "div"
+            ]
+        }
+    ],
+    "classes-fixed": [],
+    "classes": [],
+    "css-variables": [
+        {
+            "name": "--ilw-card--margin-top",
+            "depreciated": false,
+            "description": "Margin above cards [default: 0]"
+        },
+        {
+            "name": "--ilw-card--margin-bottom",
+            "depreciated": false,
+            "description": "Margin below cards [default: 0]"
+        },
+        {
+            "name": "--ilw-card--content-padding-top",
+            "depreciated": false,
+            "description": "Top padding around main content in the card [default: 2.5rem]"
+        },
+        {
+            "name": "--ilw-card--content-padding-right",
+            "depreciated": false,
+            "description": "Right padding around main content in the card [default: 2rem]"
+        },
+        {
+            "name": "--ilw-card--content-padding-bottom",
+            "depreciated": false,
+            "description": "Bottom padding around main content in the card [default: 2rem]"
+        },
+        {
+            "name": "--ilw-card--content-padding-left",
+            "depreciated": false,
+            "description": "Left padding around main content in the card [default: 2rem]"
+        },
+        {
+            "name": "--ilw-card--font-size",
+            "depreciated": false,
+            "description": "Card text font size [default: 1.2rem]"
+        },
+        {
+            "name": "--ilw-card--heading--font-size",
+            "depreciated": false,
+            "description": "Font size for a card's heading [default: 1.45em]"
+        },
+        {
+            "name": "--ilw-card--icon-width",
+            "depreciated": false,
+            "description": "Limit for an icon's width [default: 120px]"
+        },
+        {
+            "name": "--ilw-card--icon-height",
+            "depreciated": false,
+            "description": "Limit for an icon's height [default: 80px]"
+        },
+        {
+            "name": "--ilw-card--clickable--heading-size",
+            "depreciated": false,
+            "description": "Font size for a clickable card heading [default: 1.34rem]"
+        }
+    ]
+}
