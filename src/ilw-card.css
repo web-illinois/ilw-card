@@ -123,6 +123,25 @@ ilw-card {
         }
     }
 
+    a[target="_blank"]::after {
+        display: var(--ilw-new-window--display, inline-block);
+        content: var(--ilw-new-window--content, "");
+        mask-image: var(--ilw-new-window--mask-image, url(https://cdn.brand.illinois.edu/icons/solid/blue/link.svg));
+        margin-left:  var(--ilw-new-window--margin-left, 0);
+        position: relative;
+        width: var(--ilw-new-window--width, 1em);
+        height: var(--ilw-new-window--height, 1em);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+        text-decoration: none;
+        vertical-align: middle;
+        background-color: var(--ilw-new-window--background-color, currentColor);
+    }
+
     > [slot=image] {
         img {
             display: block;
