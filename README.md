@@ -6,11 +6,9 @@ Links: **[ilw-card in Builder](https://builder3.toolkit.illinois.edu/component/i
 
 ## Overview
 
-A card component that can be used as a container for grouping information, reminiscent of a physical
-note or playing card.
+A card component that can be used as a container for grouping information, reminiscent of a physical note or playing card.
 
-By default, the card is a white box with a dark border, limited in width, showing the content inside of it. There are
-several variations:
+By default, the card is a white box with a dark border, limited in width, showing the content inside of it. There are several variations:
 
 - The top of the card can have an image using `slot="image"`, or an icon using `slot="icon"`.
 - The whole card can be made clickable using the attribute `clickable` (see [Clickable Card](#clickable-card) section for details).
@@ -40,11 +38,9 @@ Slots are added to the HTML inside the ilw-card component (see examples below).
 
 ### Icons in clickable cards
 
-In order for themes and hover states to color icons correctly in a clickable card, the icon needs to be colorable using
-`currentColor`.
+In order for themes and hover states to color icons correctly in a clickable card, the icon needs to be colorable using `currentColor`.
 
-CSS to apply this to the [Illinois brand icons](https://cdn.brand.illinois.edu/icons.html) is already included,
-as long as you include them as inline SVG rather than with an `<img>` tag.
+CSS to apply this to the [Illinois brand icons](https://cdn.brand.illinois.edu/icons.html) is already included, as long as you include them as inline SVG rather than with an `<img>` tag.
 
 With other icons, you may need to apply the change. For reference, here is the relevant CSS for the Illinois icons:
 
@@ -56,12 +52,9 @@ ilw-card path.cls-1 {
 
 ### Buttons in cards
 
-The card component overrides certain aspects of `ilw-button` and `ilw-buttons` elements to make them match
-with the chosen theme, as well as hover states. The overrides only apply if there isn't a specific theme class
-added to the buttons (eg. `ilw-theme-orange`).
+The card component overrides certain aspects of `ilw-button` and `ilw-buttons` elements to make them match with the chosen theme, as well as hover states. The overrides only apply if there isn't a specific theme class added to the buttons (eg. `ilw-theme-orange`).
 
-For clickable cards, the CSS background animation is also removed, because it doesn't really work with the card
-transition.
+For clickable cards, the CSS background animation is also removed, because it doesn't really work with the card transition.
 
 ## Code Examples
 
@@ -91,11 +84,9 @@ transition.
 
 ### Clickable card
 
-A clickable card uses the first link found in the contents as the primary link to use for the whole
-card. When using this form, do not wrap the whole contents of the card in a link, that is done automatically.
+A clickable card uses the first link found in the contents as the primary link to use for the whole card. When using this form, do not wrap the whole contents of the card in a link, that is done automatically.
 
-A clickable card can have additional buttons or links that function as normal. Clicking the card outside of
-those will utilize the first link in the contents.
+A clickable card can have additional buttons or links that function as normal. Clicking the card outside of those will utilize the first link in the contents.
 
 ```html
 <ilw-card clickable>
@@ -108,13 +99,17 @@ those will utilize the first link in the contents.
 </ilw-card>
 ```
 
+### Clickable or non-clickable cards? 
+ 
+Choose whether cards should be clickable based on their purpose and how they work together in a group.
+- **Use clickable cards for a single destination.** Examples include program summaries linking to program details or news summaries linking to full articles. Add the `clickable` attribute to `<ilw-card>` and place the destination link in the heading. The component uses the first link as the destination for the whole card; do not wrap the card in a link. A clickable card should not contain additional links or buttons. 
+- **Use non-clickable cards when the content stands on its own or includes multiple links or actions.** Examples include contact information, statistics, or resource lists. Provide descriptive links or buttons within the card when visitors need to take action.
+- **Use the same interaction pattern throughout a card group.** Do not mix clickable and non-clickable cards. If some cards in a group would be clickable and others would not, use non-clickable cards for the entire group, with individual links or buttons where needed.
+
 ## Accessibility Notes
 
-- Make sure to use the **correct heading level** for the cards based on the rest of your page, if including a heading
-  tag.
-- **Images and icons** on cards should generally be decorative with an empty `alt=""` attribute. If an alt text is
-  specified, the image comes after the card content in the DOM. This ensures the heading is first for screen
-  readers, and the image is under that heading.
+- Make sure to use the **correct heading level** for the cards based on the rest of your page, if including a heading tag.
+- **Images and icons** on cards should generally be decorative with an empty `alt=""` attribute. If an alt text is specified, the image comes after the card content in the DOM. This ensures the heading is first for screen readers, and the image is under that heading.
 - **Centered text** can be harder to read, so avoid longer card text that's centered.
 - Make sure **links and buttons** are descriptive, using `ilw-sr-only` if needed to add context. For example:
 
@@ -122,8 +117,7 @@ those will utilize the first link in the contents.
 <a href="#" class="ilw-button">Learn More <span class="ilw-sr-only">About Cards</span></a>
 ```
 
-Note that [WCAG Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name) specifies that the
-name and label must begin with the same words, so the hidden portion should be at the end.
+Note that [WCAG Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name) specifies that the name and label must begin with the same words, so the hidden portion should be at the end.
 
 ## Upgrade Process
 
